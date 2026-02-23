@@ -1,0 +1,75 @@
+.statsSection {
+    position: relative;
+    width: 100%;
+    padding: 2.5rem 5vw;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.statCard.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.statValue {
+    font-family: 'Playfair Display', serif, system-ui;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 400;
+    color: var(--color-text, #111);
+    line-height: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .statValue {
+        color: #f1f1f1;
+    }
+}
+
+.statLabel {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    .statLabel {
+        color: rgba(230, 230, 230, 0.5);
+    }
+}

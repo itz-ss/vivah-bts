@@ -1,0 +1,137 @@
+/* =========================
+   CONTACT - LUXURY GARDEN
+========================= */
+
+.contact-section {
+  background: transparent;
+  position: relative;
+  z-index: 5;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.contact-info-glass {
+  padding: var(--space-lg);
+}
+
+.contact-info h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+}
+
+.contact-info p {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-details span {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contact-details span::before {
+  content: "🌿";
+  font-size: 1.2rem;
+  filter: sepia(1) saturate(2) hue-rotate(5deg);
+}
+
+/* Form Styles */
+.contact-form-glass {
+  padding: var(--space-lg);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(198, 169, 106, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.3rem;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: var(--transition-slow);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: rgba(198, 169, 106, 0.08);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-soft);
+}
+
+.contact-form button {
+  padding: 1.3rem;
+  background: var(--color-accent);
+  color: var(--color-base);
+  border-radius: 100px;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-slow);
+}
+
+.contact-form button:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.status-message {
+  padding: 1rem;
+  border-radius: 16px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+  border: 1px solid #2ecc71;
+}
+
+.status-message.error {
+  background: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+  border: 1px solid #e74c3c;
+}
+
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

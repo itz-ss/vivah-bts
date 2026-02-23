@@ -1,0 +1,94 @@
+.introSection {
+    position: relative;
+    width: 100%;
+    padding: 5rem 5vw;
+    background-color: transparent;
+    /* Rely on 3D bg */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8rem;
+    }
+}
+
+.header {
+    flex: 1;
+}
+
+.title {
+    color: var(--color-primary, #111);
+    margin-top: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: #f1f1f1;
+    }
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 1rem;
+    /* Aligns with the heading organically */
+}
+
+.description {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(20, 20, 20, 0.8);
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .description {
+        color: rgba(230, 230, 230, 0.8);
+    }
+}
+
+.footerRow {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footerText {
+    font-family: 'Playfair Display', serif, system-ui;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: rgba(20, 20, 20, 0.6);
+    white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+    .footerText {
+        color: rgba(230, 230, 230, 0.6);
+    }
+}
+
+.aestheticLine {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(20, 20, 20, 0.2) 0%, transparent 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+    .aestheticLine {
+        background: linear-gradient(90deg, rgba(230, 230, 230, 0.2) 0%, transparent 100%);
+    }
+}

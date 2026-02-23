@@ -1,0 +1,61 @@
+/* ===== MASTER LAYERS ===== */
+.global-luxury-bg-system {
+  filter: contrast(1.05) saturate(1.02);
+}
+.atmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* drifting particles */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.2px);
+  will-change: transform, opacity;
+}
+
+/* ===== BLOOM ===== */
+
+.bloom {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: blur(40px);
+  opacity: 0.9;
+  mix-blend-mode: soft-light;
+
+  background: radial-gradient(
+  circle at 50% 0%,
+  rgba(209,169,165,0.22) 0%,
+  rgba(209,169,165,0.10) 35%,
+  transparent 70%
+);
+}
+
+/* ===== DEPTH HAZE ===== */
+
+.haze {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: blur(20px);
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(122,129,108,0.05) 50%,
+    rgba(42,38,36,0.14) 100%
+  );
+}
+
+/* ===== FILM GRAIN ===== */
+
+.luxury-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+}

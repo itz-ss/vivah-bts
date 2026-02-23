@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "Vivah BTS",
+    "subtitle": "Luxury Cinematic Wedding Stories",
+    "videoUrl": "/videos/herovideo.mp4",
+    "ctaText": "Explore Films",
+    "ctaLink": "/portfolio"
+  },
+  "intro": {
+    "overline": "India’s Premium",
+    "title": "Wedding Content Creator",
+    "mainTitle": "Vivah BTS",
+    "description": "We capture your wedding as it happens — with cinematic reels, aesthetic stories, and trend-driven social media content. Our team specializes in behind-the-scenes moments, couple portraits, guest emotions, and real-time edits so your celebration looks magical both offline and online.",
+    "footerText": "Let your love story trend forever."
+  },
+  "stats": [
+    {
+      "label": "Weddings Covered",
+      "value": "250+"
+    },
+    {
+      "label": "Cinematic Reels",
+      "value": "1200+"
+    },
+    {
+      "label": "Happy Couples",
+      "value": "300+"
+    },
+    {
+      "label": "Real-time Edits",
+      "value": "100%"
+    }
+  ],
+  "featuredPortfolio": {
+    "title": "Cinematic Highlights",
+    "subtitle": "A glimpse into timeless love stories",
+    "items": [
+      {
+        "id": "1",
+        "title": "Royal Udaipur Affair",
+        "category": "Grand Wedding",
+        "image": "/images/portfolio/portfolio1.jpg",
+        "video": "/videos/highlights1.mp4"
+      },
+      {
+        "id": "2",
+        "title": "The Mumbai Sunset",
+        "category": "Beach Wedding",
+        "image": "/images/portfolio/portfolio2.jpg",
+        "video": "/videos/highlights2.mp4"
+      },
+      {
+        "id": "3",
+        "title": "Aesthetic Hills Ritual",
+        "category": "Intimate Wedding",
+        "image": "/images/portfolio/portfolio3.jpg",
+        "video": "/videos/highlights3.mp4"
+      }
+    ]
+  },
+  "brochure": {
+    "title": "Download Our Wedding Film Brochure",
+    "description": "Explore our cinematic wedding packages, storytelling approach, and premium services in one beautiful brochure.",
+    "btnText": "Download Brochure",
+    "btnLink": "/brochure.pdf",
+    "mockupImage": "/images/demo.jpg"
+  },
+  "gear":{
+    "title": "Precision Gear & Technology",
+    "subtitle": "We use industry-leading equipment to ensure your love story is captured with cinematic precision and breathtaking clarity.",
+    "items": [
+      {
+        "name": "Sony A7S III",
+        "image": "/images/image.png"
+      },
+      {
+        "name": "DJI Ronin RS3",
+        "image": "/images/image.png"
+      },
+      {
+        "name": "Master Primes",
+        "image": "/images/image.png"
+      },
+      {
+        "name": "DJI Mavic 3 Pro",
+        "image": "/images/image.png"
+      },
+      {
+        "name": "Hollyland Cosmo",
+        "image": "/images/image.png"
+      },
+      {
+        "name": "Sennheiser Audio",
+        "image": "/images/image.png"
+      }
+    ]
+  }
+}

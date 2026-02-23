@@ -1,0 +1,31 @@
+/* Premium Cinematic Portfolio Intro */
+.portfolio-intro {
+    text-align: center;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin: 4rem auto 3rem auto;
+    font-family: 'Playfair Display', serif, system-ui;
+    font-weight: 400;
+    color: var(--color-text, #111);
+    max-width: 800px;
+    line-height: 1.4;
+    padding: 0 1rem;
+    animation: fadeUpIntro 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.portfolio-intro b {
+    font-weight: 500;
+    color: var(--color-primary);
+    /* Dried Sage emphasis */
+}
+
+@keyframes fadeUpIntro {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

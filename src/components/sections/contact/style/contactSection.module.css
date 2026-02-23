@@ -1,0 +1,234 @@
+.contactSection {
+    position: relative;
+    width: 100%;
+    padding: 8rem 5vw 12rem 5vw;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        gap: 8rem;
+    }
+}
+
+.infoColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    margin-bottom: 4rem;
+    max-width: 500px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s;
+}
+
+.contactDetails.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.detailBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailLabel {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(20, 20, 20, 0.4);
+}
+
+.detailValue {
+    font-family: 'Playfair Display', serif, system-ui;
+    font-size: 1.5rem;
+    color: var(--color-text, #111);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .detailLabel {
+        color: rgba(230, 230, 230, 0.4);
+    }
+
+    .detailValue {
+        color: #f1f1f1;
+    }
+}
+
+a.detailValue:hover {
+    opacity: 0.7;
+}
+
+.formColumn {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
+}
+
+.formColumn.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contactForm {
+    background: rgba(255, 255, 255, 0.15);
+    /* Glass feel */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .contactForm {
+        background: rgba(20, 20, 25, 0.4);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.formRow {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .formRow {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .formRow .inputGroup {
+        flex: 1;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.label {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(20, 20, 20, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+    .label {
+        color: rgba(230, 230, 230, 0.6);
+    }
+}
+
+.input,
+.textarea {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 1rem;
+    color: var(--color-text, #111);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    transition: border-color 0.3s ease;
+    outline: none;
+    border-radius: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .input,
+    .textarea {
+        color: #f1f1f1;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.input:focus,
+.textarea:focus {
+    border-bottom-color: var(--color-text, #111);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .input:focus,
+    .textarea:focus {
+        border-bottom-color: #f1f1f1;
+    }
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submitBtn {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-background, #fff);
+    background: var(--color-text, #111);
+    border: none;
+    padding: 1.25rem 3rem;
+    border-radius: 100px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+}
+
+@media (prefers-color-scheme: dark) {
+    .submitBtn {
+        background: #f1f1f1;
+        color: #111;
+    }
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .submitBtn:hover {
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+}

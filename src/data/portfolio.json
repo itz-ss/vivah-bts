@@ -1,0 +1,55 @@
+{
+  "title": "Selected Works",
+  "subtitle": "A collection of luxury cinematic wedding stories and behind-the-scenes moments.",
+  "filters": ["All", "Grand Weddings", "Intimate", "Destination"],
+  "items": [
+    {
+      "id": "p1",
+      "title": "Royal Udaipur Affair",
+      "category": "Grand Weddings",
+      "image": "/images/portfolio/portfolio1.jpg",
+      "video": "/videos/highlights1.mp4",
+      "description": "A three-day royal celebration captured across the majestic palaces of Udaipur."
+    },
+    {
+      "id": "p2",
+      "title": "The Mumbai Sunset",
+      "category": "Destination",
+      "image": "/images/portfolio/portfolio2.jpg",
+      "video": "/videos/highlights2.mp4",
+      "description": "An aesthetic dusk ceremony by the sea with cinematic drone sweeps."
+    },
+    {
+      "id": "p3",
+      "title": "Aesthetic Hills Ritual",
+      "category": "Intimate",
+      "image": "/images/portfolio/portfolio3.jpg",
+      "video": "/videos/highlights3.mp4",
+      "description": "Minimal, raw, and highly emotional candid captures in the Himalayas."
+    },
+    {
+      "id": "p4",
+      "title": "The Grand Entry",
+      "category": "Grand Weddings",
+      "image": "/images/portfolio/portfolio1.jpg",
+      "video": "/videos/highlights1.mp4",
+      "description": "Showcasing the massive scale and energy of a traditional Indian Baraat."
+    },
+    {
+      "id": "p5",
+      "title": "Haldi Colors",
+      "category": "Intimate",
+      "image": "/images/portfolio/portfolio2.jpg",
+      "video": "/videos/highlights2.mp4",
+      "description": "A vibrant and joyous haldi ceremony with slow-motion color splashes."
+    },
+    {
+      "id": "p6",
+      "title": "Tuscan Vows",
+      "category": "Destination",
+      "image": "/images/portfolio/portfolio3.jpg",
+      "video": "/videos/highlights3.mp4",
+      "description": "A beautiful destination wedding under the Italian sun."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "company": {
+    "title": "About Us",
+    "subtitle": "Love, captured behind the scenes — in real time.",
+    "teamPhoto": "/images/team/team-group.jpg",
+    "description": [
+      "Vivah BTS is a wedding content creation studio dedicated to turning real moments into beautiful digital memories. We specialize in live social media coverage, cinematic reels, aesthetic stories, and same-day edits that let your wedding shine online while the celebration is still happening.",
+      "From intimate glances to grand entries, from haldi laughter to vidaai tears — our team captures emotions, energy, and elegance with a modern storytelling approach. We don’t just document weddings, we curate experiences that are personal, stylish, and truly unforgettable.",
+      "At Vivah BTS, every couple has a unique story — and we make sure the world sees it beautifully."
+    ]
+  },
+
+  "services": {
+    "title": "We Specialize In",
+    "mainServices": [
+      {
+        "name": "Social Media Management",
+        "description": "Real-time posting & engagement."
+      },
+      {
+        "name": "Live Reels & Stories",
+        "description": "Trendy, aesthetic wedding content."
+      },
+      {
+        "name": "Instant Editing",
+        "description": "Same-day cinematic delivery."
+      }
+    ],
+    "addonsTitle": "Extra Add-on Services",
+    "addons": [
+      "Couple Interview Reels",
+      "Guest Reaction Videos",
+      "Pre-Wedding Content",
+      "Save-the-Date Reels"
+    ]
+  },
+
+  "teamTitle": "Meet Our Creative Team",
+
+  "members": [
+    {
+      "id": "member-1",
+      "name": "Shreya Gupta",
+      "role": "Founder | Wedding Content Creator",
+      "bio": "Captures breathtaking visuals and cinematic wedding moments with artistic framing.",
+      "image": "/images/team/rahul.jpg"
+    },
+    {
+      "id": "member-2",
+      "name": "Nitin Yadav",
+      "role": "Founder & Content Creator",
+      "bio": "Turning wedding moments into cinematic visuals with creative filming and premium edits.",
+      "image": "/images/team/amit.jpg"
+    }
+  ]
+}

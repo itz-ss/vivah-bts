@@ -1,0 +1,138 @@
+.gearSection {
+    position: relative;
+    width: 100%;
+    padding: 4rem 5vw;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.imageWrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    /* Elegant circular framing for gear */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: background 0.4s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .imageWrapper {
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
+.card:hover .imageWrapper {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+    .card:hover .imageWrapper {
+        background: rgba(255, 255, 255, 0.06);
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover .image {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.gearName {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text, #111);
+    text-align: center;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gearName {
+        color: #f1f1f1;
+    }
+}
+
+.aestheticLine {
+    width: 0;
+    height: 1px;
+    background-color: var(--color-text, #111);
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .aestheticLine {
+        background-color: #f1f1f1;
+    }
+}
+
+.card:hover .aestheticLine {
+    width: 40px;
+}

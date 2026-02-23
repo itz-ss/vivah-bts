@@ -1,0 +1,234 @@
+/* Designer Navbar Styles */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 2rem 0;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: transparent;
+}
+
+.scrolled {
+    padding: 1rem 0;
+    background-color: rgba(250, 249, 246, 0.85);
+    /* Premium soft white */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Dark Mode Fallbacks */
+@media (prefers-color-scheme: dark) {
+    .scrolled {
+        background-color: rgba(15, 15, 18, 0.85);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5vw;
+}
+
+.logo {
+    text-decoration: none;
+    z-index: 1001;
+    /* Stay above mobile menu */
+    position: relative;
+}
+
+.logoText {
+    font-family: 'Playfair Display', serif, system-ui;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    color: var(--color-text, #111);
+    transition: color 0.4s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .logoText {
+        color: #f1f1f1;
+    }
+}
+
+.navLinks {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .navLinks {
+        display: flex;
+    }
+}
+
+.navLink {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text, #333);
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .navLink {
+        color: #dedede;
+    }
+}
+
+/* Smooth hover underline slide */
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navLink:hover {
+    color: var(--color-primary, #000);
+}
+
+@media (prefers-color-scheme: dark) {
+    .navLink:hover {
+        color: #fff;
+    }
+}
+
+.navLink:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Mobile Hamburger */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburgerLine {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-text, #111);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .hamburgerLine {
+        background-color: #f1f1f1;
+    }
+}
+
+/* Hamburger Open States for smooth X */
+.hamburger.open .hamburgerLine:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .hamburgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .hamburgerLine:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background, #faf9f6);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    clip-path: circle(0% at right 4rem top 3rem);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .mobileMenu {
+        background-color: #0a0a0c;
+    }
+}
+
+.mobileMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    clip-path: circle(150% at right 4rem top 3rem);
+}
+
+.mobileNavLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.mobileNavLinks li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileMenuOpen .mobileNavLinks li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobileNavLink {
+    text-decoration: none;
+    font-family: 'Playfair Display', serif, system-ui;
+    font-size: 2.5rem;
+    color: var(--color-text, #111);
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    .mobileNavLink {
+        color: #f1f1f1;
+    }
+}

@@ -1,0 +1,84 @@
+/* PremiumTextReveal Styles */
+
+.premium-text {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* Mask reveal setup */
+}
+
+/* Base typographic scales for cinematic feel */
+.premium-text.heading {
+    font-family: 'Playfair Display', serif, system-ui;
+    /* Example luxury serif */
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.premium-text.subheading {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.7);
+    /* Soft neutral */
+}
+
+.premium-text.body {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+.text-container-mask {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.word-wrapper {
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.char-element {
+    display: inline-block;
+    will-change: transform, opacity, filter;
+}
+
+.whitespace {
+    display: inline-block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    .premium-text.subheading {
+        color: rgba(230, 230, 230, 0.7);
+    }
+
+    .premium-text.body {
+        color: rgba(230, 230, 230, 0.8);
+    }
+
+    .premium-text.heading {
+        color: #faf9f6;
+    }
+}
