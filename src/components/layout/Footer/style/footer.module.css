@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    background-color: var(--color-warm-oak);
+    background-color: var(--color-faded-rust);
     /* Allows global 3D background to show through */
     /* padding-top: 8rem; */
     overflow: hidden;
@@ -13,7 +13,7 @@
     height: 1px;
     background: linear-gradient(90deg,
             rgba(20, 20, 20, 0) 0%,
-            rgba(20, 20, 20, 0.1) 50%,
+            rgba(92, 73, 73, 0.1) 50%,
             rgba(20, 20, 20, 0) 100%);
     margin-bottom: 5rem;
 }

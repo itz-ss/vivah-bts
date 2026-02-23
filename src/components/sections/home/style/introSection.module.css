@@ -27,7 +27,8 @@
 }
 
 .title {
-    color: var(--color-primary, #111);
+    /* color: var(--color-primary, #111); */
+    color: rgba(20, 20, 20, 0.7);
     margin-top: 1rem;
 }
 
