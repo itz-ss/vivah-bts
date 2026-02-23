@@ -46,14 +46,14 @@
         "id": "2",
         "title": "The Mumbai Sunset",
         "category": "Beach Wedding",
-        "image": "/images/portfolio/portfolio2.jpg",
+        "image": "/images/portfolio/portfolio1.jpg",
         "video": "/videos/highlights2.mp4"
       },
       {
         "id": "3",
         "title": "Aesthetic Hills Ritual",
         "category": "Intimate Wedding",
-        "image": "/images/portfolio/portfolio3.jpg",
+        "image": "/images/portfolio/portfolio1.jpg",
         "video": "/videos/highlights3.mp4"
       }
     ]
@@ -62,7 +62,7 @@
     "title": "Download Our Wedding Film Brochure",
     "description": "Explore our cinematic wedding packages, storytelling approach, and premium services in one beautiful brochure.",
     "btnText": "Download Brochure",
-    "btnLink": "/brochure.pdf",
+    "btnLink": "/broucher.pdf",
     "mockupImage": "/images/demo.jpg"
   },
   "gear":{
@@ -71,27 +71,27 @@
     "items": [
       {
         "name": "Sony A7S III",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       },
       {
         "name": "DJI Ronin RS3",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       },
       {
         "name": "Master Primes",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       },
       {
         "name": "DJI Mavic 3 Pro",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       },
       {
         "name": "Hollyland Cosmo",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       },
       {
         "name": "Sennheiser Audio",
-        "image": "/images/image.png"
+        "image": "/images/gears/image.png"
       }
     ]
   }

@@ -24,7 +24,11 @@ export default function BrochureSection({ data }) {
                         {data.description}
                     </p>
                     <div className={`${styles.actionWrapper} ${isInView ? styles.fadeUp : ''}`}>
-                        <a href={data.btnLink} className={styles.downloadBtn} target="_blank" rel="noopener noreferrer">
+                        <a
+                            href={data.btnLink}
+                            className={styles.downloadBtn}
+                            download
+                        >
                             {data.btnText}
                         </a>
                     </div>
