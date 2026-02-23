@@ -23,7 +23,7 @@ export default function GlobalLuxuryBg() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(circle at 50% 50%, var(--color-bone) 0%, var(--color-dusty-rose) 100%)",
+            "radial-gradient(circle at 50% 50%, var(--color-faded-rust) 0%, var(--color-dusty-rose) 100%)",
         }}
       />
 
