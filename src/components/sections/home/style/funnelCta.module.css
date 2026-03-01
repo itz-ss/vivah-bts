@@ -1,0 +1,138 @@
+/* FunnelCTA Section – French Romantic Minimalist */
+
+.funnelSection {
+    position: relative;
+    width: 100%;
+    padding: var(--spacing-hero) 5vw;
+    text-align: center;
+    overflow: hidden;
+    background: var(--color-parchment);
+}
+
+.funnelSection::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(60, 47, 47, 0.05) 0%, transparent 70%);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.inner {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s var(--transition-luxury);
+}
+
+.inner.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overline {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-espresso);
+    opacity: 0.4;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--color-espresso);
+    margin: 0;
+    font-style: italic;
+}
+
+.subtitle {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 600px;
+}
+
+/* CTA Row */
+.ctaRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-parchment);
+    background: var(--color-espresso);
+    padding: 1.4rem 4rem;
+    border-radius: 0;
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-espresso);
+}
+
+.btnPrimary:hover {
+    background: transparent;
+    color: var(--color-espresso);
+    transform: translateY(-3px);
+}
+
+.btnIcon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.btnSecondary {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-espresso);
+    border: 1px solid var(--color-espresso);
+    padding: 1.4rem 4rem;
+    border-radius: 0;
+    transition: all var(--transition-fast);
+}
+
+.btnSecondary:hover {
+    background: rgba(60, 47, 47, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Trust line */
+.trustLine {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.1em;
+    margin: 0;
+    opacity: 0.5;
+    font-style: italic;
+}

@@ -1,0 +1,449 @@
+{
+  "seoAudit": {
+    "timestamp": "2026-02-27",
+    "siteName": "Vivah BTS",
+    "overallScore": 82,
+    "scoreBreakdown": {
+      "technical": 95,
+      "onPage": 75,
+      "offPage": 35,
+      "local": 40,
+      "content": 70
+    },
+    "recommendations": {
+      "critical": [
+        {
+          "priority": 1,
+          "title": "Setup Google Analytics 4",
+          "description": "Complete GA4 implementation with conversion tracking",
+          "expectedImpact": "High - Essential for measuring success",
+          "timeToImplement": "30 minutes",
+          "difficulty": "Easy"
+        },
+        {
+          "priority": 2,
+          "title": "Verify Google Search Console",
+          "description": "Claim and verify domain in Google Search Console for search data",
+          "expectedImpact": "High - Monitoring and optimization insights",
+          "timeToImplement": "10 minutes",
+          "difficulty": "Easy"
+        },
+        {
+          "priority": 3,
+          "title": "Setup Google Business Profile",
+          "description": "Create and optimize Google Business Profile for local SEO",
+          "expectedImpact": "Very High - Local visibility and trust",
+          "timeToImplement": "1-2 hours",
+          "difficulty": "Easy"
+        },
+        {
+          "priority": 4,
+          "title": "Add Core Web Vitals Optimization",
+          "description": "Implement next/image, lazy loading, and performance optimizations",
+          "expectedImpact": "High - Ranking factor + user experience",
+          "timeToImplement": "4-6 hours",
+          "difficulty": "Medium"
+        }
+      ],
+      "high": [
+        {
+          "title": "Portfolio Page SEO Enhancement",
+          "description": "Add detailed descriptions (300+ words) to each portfolio item with schema markup",
+          "expectedImpact": "Medium-High",
+          "timeToImplement": "2-3 hours",
+          "difficulty": "Medium"
+        },
+        {
+          "title": "Create Service Pages",
+          "description": "Build dedicated pages for each service offering with full SEO optimization",
+          "expectedImpact": "Medium-High",
+          "timeToImplement": "6-8 hours",
+          "difficulty": "Medium"
+        },
+        {
+          "title": "FAQ Page Schema Implementation",
+          "description": "Add FAQPage and schema markup to FAQ section",
+          "expectedImpact": "Medium",
+          "timeToImplement": "1-2 hours",
+          "difficulty": "Medium"
+        },
+        {
+          "title": "Local Directory Submissions",
+          "description": "Submit to 20+ relevant directories (JustDial, Indiamart, Yellow Pages, etc.)",
+          "expectedImpact": "Medium-High",
+          "timeToImplement": "3-4 hours",
+          "difficulty": "Easy"
+        },
+        {
+          "title": "Review Collection Campaign",
+          "description": "Systematically collect 50+ reviews on Google, Facebook, Instagram",
+          "expectedImpact": "Very High",
+          "timeToImplement": "Ongoing",
+          "difficulty": "Easy"
+        }
+      ],
+      "medium": [
+        {
+          "title": "Content Expansion",
+          "description": "Add 100+ words to each page for better keyword coverage",
+          "expectedImpact": "Medium",
+          "timeToImplement": "4-6 hours",
+          "difficulty": "Easy"
+        },
+        {
+          "title": "Internal Linking Strategy",
+          "description": "Implement 3-5 internal links per page to relevant content",
+          "expectedImpact": "Medium",
+          "timeToImplement": "2-3 hours",
+          "difficulty": "Easy"
+        },
+        {
+          "title": "Image Alt Text & Optimization",
+          "description": "Add descriptive alt text to all images with keywords",
+          "expectedImpact": "Medium",
+          "timeToImplement": "2-3 hours",
+          "difficulty": "Easy"
+        },
+        {
+          "title": "Video Schema Implementation",
+          "description": "Add VideoObject schema to all portfolio videos",
+          "expectedImpact": "Medium",
+          "timeToImplement": "2-3 hours",
+          "difficulty": "Medium"
+        },
+        {
+          "title": "Create Blog/Resources Section",
+          "description": "Start publishing 1-2 articles weekly on wedding topics",
+          "expectedImpact": "High (Over time)",
+          "timeToImplement": "4 hours/post",
+          "difficulty": "Medium"
+        }
+      ],
+      "low": [
+        {
+          "title": "hreflang Implementation",
+          "description": "If planning international expansion, add hreflang tags",
+          "expectedImpact": "Low",
+          "timeToImplement": "1 hour",
+          "difficulty": "Medium"
+        },
+        {
+          "title": "AMP Implementation",
+          "description": "Optional: Accelerated Mobile Pages for faster mobile",
+          "expectedImpact": "Low",
+          "timeToImplement": "8-10 hours",
+          "difficulty": "Hard"
+        }
+      ]
+    },
+    "keywordOpportunities": {
+      "highPriority": [
+        {
+          "keyword": "wedding videographer delhi",
+          "searchVolume": 320,
+          "difficulty": "Medium",
+          "intent": "Commercial",
+          "currentRank": "Not ranking"
+        },
+        {
+          "keyword": "cinematic wedding films",
+          "searchVolume": 150,
+          "difficulty": "Medium",
+          "intent": "Commercial",
+          "currentRank": "Not ranking"
+        },
+        {
+          "keyword": "wedding cinematography",
+          "searchVolume": 450,
+          "difficulty": "High",
+          "intent": "Commercial",
+          "currentRank": "Not ranking"
+        },
+        {
+          "keyword": "luxury wedding videos",
+          "searchVolume": 90,
+          "difficulty": "Medium",
+          "intent": "Commercial",
+          "currentRank": "Not ranking"
+        },
+        {
+          "keyword": "destination wedding videographer",
+          "searchVolume": 110,
+          "difficulty": "Medium",
+          "intent": "Commercial",
+          "currentRank": "Not ranking"
+        }
+      ],
+      "mediumPriority": [
+        {
+          "keyword": "wedding content creator",
+          "searchVolume": 40,
+          "difficulty": "Medium",
+          "intent": "Commercial"
+        },
+        {
+          "keyword": "real-time wedding editing",
+          "searchVolume": 35,
+          "difficulty": "Low",
+          "intent": "Informational"
+        },
+        {
+          "keyword": "cinematic wedding reels",
+          "searchVolume": 50,
+          "difficulty": "Low",
+          "intent": "Commercial"
+        }
+      ],
+      "longTail": [
+        {
+          "keyword": "how to choose wedding videographer",
+          "searchVolume": 20,
+          "difficulty": "Low",
+          "intent": "Informational"
+        },
+        {
+          "keyword": "best wedding cinematography techniques",
+          "searchVolume": 15,
+          "difficulty": "Low",
+          "intent": "Informational"
+        },
+        {
+          "keyword": "cinematic wedding video examples",
+          "searchVolume": 25,
+          "difficulty": "Low",
+          "intent": "Commercial"
+        }
+      ]
+    },
+    "competitorAnalysis": {
+      "topCompetitors": [
+        {
+          "name": "Competitor 1",
+          "status": "To be determined",
+          "dominantKeywords": "TBD"
+        },
+        {
+          "name": "Competitor 2",
+          "status": "To be determined",
+          "dominantKeywords": "TBD"
+        }
+      ],
+      "gaps": [
+        "Most competitors lack proper schema markup",
+        "Limited content strategy (portfolio-only focus)",
+        "Weak social media integration",
+        "Poor mobile optimization",
+        "Missing Core Web Vitals optimization"
+      ],
+      "opportunities": [
+        "Capture 'cinematic wedding' high-value segment",
+        "Content-driven approach (blog + portfolio)",
+        "Strong technical SEO (schema, structured data)",
+        "Local focus with multi-city expansion",
+        "Video SEO leadership"
+      ]
+    },
+    "technicalSEO": {
+      "status": "Excellent",
+      "completed": [
+        "✅ Responsive design",
+        "✅ Fast loading time",
+        "✅ HTTPS/SSL",
+        "✅ XML Sitemap",
+        "✅ Robots.txt",
+        "✅ Canonical URLs",
+        "✅ Schema markup (5 types)",
+        "✅ Open Graph tags",
+        "✅ Twitter Cards",
+        "✅ Mobile-friendly",
+        "✅ Image optimization enabled",
+        "✅ Charset declared",
+        "✅ Viewport meta tag"
+      ],
+      "todo": [
+        "⏳ Verify Core Web Vitals excellence",
+        "⏳ Implement lazy loading for images",
+        "⏳ Add blur placeholders to images",
+        "⏳ Optimize font loading"
+      ]
+    },
+    "onPageSEO": {
+      "status": "Good",
+      "scores": {
+        "titles": 90,
+        "descriptions": 85,
+        "headingStructure": 80,
+        "contentLength": 75,
+        "keyword Integration": 70,
+        "internalLinking": 60,
+        "imageOptimization": 70
+      },
+      "recommendations": [
+        "Expand content on portfolio items (min 300 words each)",
+        "Add more internal links between related pages",
+        "Ensure every image has descriptive alt text",
+        "Improve heading structure hierarchy",
+        "Add FAQ sections to service pages"
+      ]
+    },
+    "offPageSEO": {
+      "status": "Starting Phase",
+      "currentBacklinks": 0,
+      "targetBacklinks": 100,
+      "strategies": [
+        {
+          "method": "Partnership Outreach",
+          "target": 30,
+          "partners": ["Wedding planners", "Photographers", "Venue owners"]
+        },
+        {
+          "method": "Guest Posting",
+          "target": 20,
+          "platforms": ["Wedding blogs", "Industry publications", "Lifestyle sites"]
+        },
+        {
+          "method": "Directory Submissions",
+          "target": 20,
+          "directories": ["JustDial", "IndiaMART", "Yellow Pages", "Wedding directories"]
+        },
+        {
+          "method": "Resource Pages",
+          "target": 15,
+          "content": ["How-to guides", "Tools & resources", "Industry insights"]
+        },
+        {
+          "method": "Digital PR",
+          "target": 15,
+          "outreach": ["Press releases", "Media mentions", "Industry features"]
+        }
+      ]
+    },
+    "localSEO": {
+      "status": "Setup Required",
+      "googleBusinessProfile": {
+        "status": "Not Set",
+        "priority": "Critical",
+        "requirements": [
+          "Create/claim profile",
+          "Add 30+ photos",
+          "Add 10+ videos",
+          "Write complete description",
+          "List all service areas",
+          "Add phone & hours",
+          "Link to website",
+          "Collect initial reviews"
+        ]
+      },
+      "localKeywords": {
+        "delhi": ["wedding videographer delhi", "wedding cinematography delhi"],
+        "ncr": ["wedding videographer gurgaon", "wedding videographer noida", "wedding videographer faridabad"],
+        "mumbai": ["wedding videographer mumbai", "wedding cinematographer mumbai"],
+        "other": ["destination wedding videographer", "luxury wedding films india"]
+      },
+      "reviewStrategy": {
+        "target": 100,
+        "byMonth6": 50,
+        "platforms": ["Google", "Facebook", "Instagram", "Wedding sites"],
+        "methods": ["Email requests", "Direct messages", "Review links", "Incentivization"]
+      }
+    },
+    "contentStrategy": {
+      "pillars": [
+        {
+          "name": "Wedding Cinematography",
+          "topics": [
+            "Behind-the-scenes techniques",
+            "Cinematic wedding trends",
+            "Equipment & technology",
+            "Post-production workflow"
+          ]
+        },
+        {
+          "name": "Wedding Planning",
+          "topics": [
+            "How to choose videographer",
+            "Videography tips & tricks",
+            "Budget guides",
+            "Checklist & planning"
+          ]
+        },
+        {
+          "name": "Wedding Inspiration",
+          "topics": [
+            "Wedding films showcase",
+            "Couple stories",
+            "Destination weddings",
+            "Cultural weddings"
+          ]
+        }
+      ],
+      "contentCalendar": {
+        "frequency": "2-3 posts per week",
+        "formats": ["Blog articles", "Videos", "Infographics", "Case studies"],
+        "distribution": ["Website blog", "YouTube", "Instagram", "LinkedIn"]
+      }
+    },
+    "performanceTargets": {
+      "month1": {
+        "organicTraffic": "50-100",
+        "searchVisibility": "10-20%",
+        "rankings": "0-5 top 10"
+      },
+      "month3": {
+        "organicTraffic": "200-400",
+        "searchVisibility": "30-40%",
+        "rankings": "5-15 top 10"
+      },
+      "month6": {
+        "organicTraffic": "500-800",
+        "searchVisibility": "50-60%",
+        "rankings": "20-30 top 10"
+      },
+      "year1": {
+        "organicTraffic": "2000-3000",
+        "searchVisibility": "70-80%",
+        "rankings": "50+ top 10"
+      }
+    },
+    "budget": {
+      "internalResources": "Ongoing SEO + monthly updates",
+      "tools": {
+        "ahrefs": "₹3500/month (optional premium research)",
+        "grammarly": "₹899/month (content quality)",
+        "canva": "Free (design resources)"
+      },
+      "outsourcing": {
+        "contentWriter": "₹800-1200 per article",
+        "linkBuilder": "₹5000-10000/month",
+        "seoConsultant": "₹10000-20000/month"
+      }
+    },
+    "timeline": {
+      "phase1Technical": {
+        "duration": "2 weeks",
+        "status": "95% Complete",
+        "nextMilestone": "Testing & verification"
+      },
+      "phase2OnPage": {
+        "duration": "2-3 weeks",
+        "status": "Todo",
+        "startDate": "Week 3"
+      },
+      "phase3Local": {
+        "duration": "2 weeks",
+        "status": "Todo",
+        "startDate": "Week 4"
+      },
+      "phase4Content": {
+        "duration": "Ongoing (4+ weeks)",
+        "status": "Todo",
+        "startDate": "Week 3"
+      },
+      "phase5LinkBuilding": {
+        "duration": "4+ weeks",
+        "status": "Todo",
+        "startDate": "Week 5"
+      }
+    }
+  }
+}

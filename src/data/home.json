@@ -62,10 +62,10 @@
     "title": "Download Our Wedding Film Brochure",
     "description": "Explore our cinematic wedding packages, storytelling approach, and premium services in one beautiful brochure.",
     "btnText": "Download Brochure",
-    "btnLink": "/broucher.pdf",
+    "btnLink": "/VivahBTSBrochure.pdf",
     "mockupImage": "/images/demo.jpg"
   },
-  "gear":{
+  "gear": {
     "title": "Precision Gear & Technology",
     "subtitle": "We use industry-leading equipment to ensure your love story is captured with cinematic precision and breathtaking clarity.",
     "items": [
@@ -94,5 +94,19 @@
         "image": "/images/gears/image.png"
       }
     ]
+  },
+  "funnelCta": {
+    "overline": "Based in Kanpur · Serving Across India",
+    "title": "Ready to Make Your Wedding Unforgettable?",
+    "subtitle": "Let's talk about your special day. We respond within the hour.",
+    "primaryCta": {
+      "text": "WhatsApp Us Now",
+      "type": "whatsapp"
+    },
+    "secondaryCta": {
+      "text": "Send an Enquiry",
+      "href": "/contact"
+    },
+    "trustLine": "300+ happy couples · Kanpur, UP & Pan-India"
   }
 }

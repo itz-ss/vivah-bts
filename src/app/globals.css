@@ -1,1 +1,12 @@
-/* This file is intentionally left empty. Use /styles/globals.css instead. */
+/* This file is intentionally left empty. Use /styles/globals.css instead. *//* Background layer */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;   /* NOT NEGATIVE */
+}
+
+/* Site content above background */
+.site-content {
+  position: relative;
+  z-index: 1;
+}

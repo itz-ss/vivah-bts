@@ -1,6 +1,79 @@
 {
-  "title": "Your Site Title",
-  "description": "Your site description",
-  "author": "Your Name",
-  "email": "your.email@example.com"
+  "title": "Vivah BTS | Wedding Videographer in Kanpur, Uttar Pradesh",
+  "description": "Vivah BTS — Premium wedding videographers in Kanpur, UP. Cinematic wedding films, real-time BTS reels & aesthetic content for luxury weddings across Uttar Pradesh & India.",
+  "longDescription": "Vivah BTS is Kanpur's leading luxury wedding content creation studio. We capture cinematic wedding stories, behind-the-scenes moments, and couple aesthetics for grand celebrations, intimate ceremonies, and destination weddings across Kanpur, Lucknow, Prayagraj, Delhi, and pan-India.",
+  "author": "Vivah BTS",
+  "email": "hello@vivahbts.com",
+  "phone": "+91 8299399871",
+  "url": "https://vivadbts.co",
+  "logo": "https://vivadbts.co/images/logo.png",
+  "image": "https://vivadbts.co/images/og-image.png",
+  "keywords": [
+    "wedding videographer in Kanpur",
+    "wedding photographer Kanpur UP",
+    "wedding BTS videographer Kanpur",
+    "cinematic wedding films Kanpur",
+    "wedding content creator Kanpur Uttar Pradesh",
+    "best wedding videographer Kanpur",
+    "luxury wedding films Kanpur",
+    "wedding cinematographer Uttar Pradesh",
+    "destination wedding video Kanpur",
+    "wedding reels Kanpur",
+    "pre-wedding shoot Kanpur",
+    "wedding BTS content creator UP",
+    "real-time wedding edits Kanpur",
+    "wedding film maker Kanpur",
+    "cinematic wedding reels UP",
+    "wedding videography Lucknow",
+    "wedding videography Prayagraj",
+    "wedding videography Agra",
+    "wedding content creator India",
+    "luxury wedding cinematographer India",
+    "behind the scenes wedding video",
+    "aesthetic wedding content creator",
+    "wedding reel creator India",
+    "wedding BTS photographer India",
+    "same day edit wedding video"
+  ],
+  "location": {
+    "city": "Kanpur",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "type": "Business",
+    "geo": {
+      "latitude": "26.4499",
+      "longitude": "80.3319"
+    }
+  },
+  "social": {
+    "instagram": "https://instagram.com/vivah.bts",
+    "facebook": "https://facebook.com/vivahbts",
+    "youtube": "https://youtube.com/@vivahbts",
+    "linkedIn": "https://linkedin.com/company/vivah-bts"
+  },
+  "business": {
+    "type": "VideoProductionService",
+    "rating": 4.9,
+    "ratingCount": 250,
+    "yearsInBusiness": 1,
+    "eventsHandled": 10,
+    "serviceArea": [
+      "Kanpur",
+      "Lucknow",
+      "Prayagraj",
+      "Agra",
+      "Delhi",
+      "Pan-India"
+    ],
+    "services": [
+      "Cinematic Wedding Films",
+      "BTS Wedding Videos",
+      "Real-Time Wedding Edits",
+      "Wedding Reels & Shorts",
+      "Pre-Wedding Shoots",
+      "Couple Aesthetic Content",
+      "Same-Day Edit Videos"
+    ],
+    "openingHours": "Mo-Sa 09:00-20:00"
+  }
 }

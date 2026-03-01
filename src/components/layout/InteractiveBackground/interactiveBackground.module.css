@@ -1,0 +1,80 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+    background: var(--color-background);
+    pointer-events: none;
+}
+
+.atmosphere {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(25px) brightness(1.1) contrast(0.9) saturate(1.1);
+    /* Lucid dream vibe: soft focus, bright but balanced */
+    mix-blend-mode: normal;
+}
+
+/* Cinematic Light Leaks */
+.lightLeak {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(150px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.leak1 {
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, rgba(168, 143, 121, 0.15) 0%, transparent 70%);
+    /* Warm Sand/Gold Leak */
+    top: -20%;
+    right: -10%;
+}
+
+.leak2 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+    /* Soft Morning Light */
+    bottom: -10%;
+    left: -5%;
+}
+
+/* Lucid Dream Haze */
+.haze {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* High-End Paper Grain */
+.grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/p6-static.png");
+    opacity: 0.06;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Minimalist Vignette */
+.vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.05) 100%);
+    z-index: 6;
+    pointer-events: none;
+}

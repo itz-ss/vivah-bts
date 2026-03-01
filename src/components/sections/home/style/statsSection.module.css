@@ -1,32 +1,19 @@
 .statsSection {
     position: relative;
     width: 100%;
-    padding: 2.5rem 5vw;
+    padding: 4rem 5vw;
     background-color: transparent;
 }
 
-.container {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
     max-width: 1440px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 5rem 0;
-}
-
-@media (min-width: 768px) {
-    .container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .container {
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
+    padding: 3rem 5vw;
+    border-top: 1px solid rgba(60, 47, 47, 0.1);
+    border-bottom: 1px solid rgba(60, 47, 47, 0.1);
 }
 
 .statCard {
@@ -34,10 +21,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    gap: 1.25rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 1s var(--transition-luxury);
 }
 
 .statCard.visible {
@@ -45,31 +32,19 @@
     transform: translateY(0);
 }
 
-.statValue {
-    font-family: 'Playfair Display', serif, system-ui;
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 400;
-    color: var(--color-text, #111);
-    line-height: 1;
+.number {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--color-espresso);
+    font-style: italic;
 }
 
-@media (prefers-color-scheme: dark) {
-    .statValue {
-        color: #f1f1f1;
-    }
-}
-
-.statLabel {
-    font-family: 'Inter', sans-serif, system-ui;
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.1em;
+.label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: rgba(20, 20, 20, 0.5);
-}
-
-@media (prefers-color-scheme: dark) {
-    .statLabel {
-        color: rgba(230, 230, 230, 0.5);
-    }
+    color: var(--color-text-secondary);
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './style/footer.module.css';
+import siteData from '../../../data/site.json';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -30,9 +31,9 @@ export default function Footer() {
                     </div>
                     <div className={styles.linkColumn}>
                         <h4 className={styles.columnTitle}>Contact</h4>
-                        <a href="mailto:hello@vivahbts.com" className={styles.footerLink}>hello@vivahbts.com</a>
-                        <a href="tel:+919876543210" className={styles.footerLink}>+91 98765 43210</a>
-                        <p className={styles.footerLink}>Mumbai, India</p>
+                        <a href={`mailto:${siteData.email}`} className={styles.footerLink}>{siteData.email}</a>
+                        <a href={`tel:${siteData.phone.replace(/\s+/g, '')}`} className={styles.footerLink}>{siteData.phone}</a>
+                        <p className={styles.footerLink}>{siteData.location.city}, {siteData.location.state}, India</p>
                     </div>
                     <div className={styles.linkColumn}>
                         <h4 className={styles.columnTitle}>Social</h4>

@@ -1,18 +1,23 @@
 {
-    "title": "Get in Touch",
-    "subtitle": "Let’s create something beautiful together. Reach out to discuss your wedding film.",
+    "title": "Book Your Wedding Film",
+    "subtitle": "Let's create something extraordinary together. Based in Kanpur · Serving across Uttar Pradesh & India.",
     "contactInfo": {
         "email": "hello@vivahbts.com",
-        "phone": "+91 98765 43210",
-        "location": "Mumbai, India",
+        "phone": "+91 6388060502",
+        "location": "Kanpur, Uttar Pradesh, India",
         "instagram": "@vivah_bts"
     },
+    "trustSignals": [
+        "Replied within 1 hour",
+        "300+ happy couples",
+        "Serving across Uttar Pradesh & India"
+    ],
     "formLabels": {
         "name": "Your Name",
         "email": "Email Address",
         "date": "Wedding Date",
-        "location": "Venue Location",
-        "message": "Tell us about your story...",
-        "submit": "Send Message"
+        "location": "Venue / City",
+        "message": "Tell us about your special day...",
+        "submit": "Send via WhatsApp"
     }
 }

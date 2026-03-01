@@ -1,0 +1,76 @@
+/* Expert Typographic System — Romantic Luxury */
+
+:root {
+    /* 1. Fluid Type Scale (Golden Ratio Inspired) */
+    /* Mobile-first scaling that grows with viewport */
+    --fs-xs: clamp(0.7rem, 0.6rem + 0.5vw, 0.8rem);
+    --fs-sm: clamp(0.8rem, 0.7rem + 0.5vw, 0.9rem);
+    --fs-base: clamp(0.95rem, 0.85rem + 0.5vw, 1.1rem);
+    --fs-md: clamp(1.2rem, 1rem + 1vw, 1.5rem);
+    --fs-lg: clamp(1.75rem, 1.5rem + 1.5vw, 2.5rem);
+    --fs-xl: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+    --fs-hero: clamp(3.5rem, 3rem + 5vw, 8rem);
+
+    /* 2. Rhythm & Leading */
+    --lh-tight: 1.1;
+    --lh-hero: 1.05;
+    --lh-heading: 1.25;
+    --lh-body: 1.8;
+    --lh-loose: 2;
+
+    /* 3. Tracking (Letter Spacing) */
+    --ls-tight: -0.02em;
+    --ls-normal: 0em;
+    --ls-wide: 0.1em;
+    --ls-widest: 0.2em;
+    /* For luxury labels */
+
+    /* 4. Expert Opentype Features */
+    --font-features: "lnum" 1, "kern" 1, "liga" 1;
+    --font-optical-sizing: auto;
+}
+
+/* Expert Global Typographic Rules */
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-normal);
+    font-feature-settings: var(--font-features);
+    font-optical-sizing: var(--font-optical-sizing);
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+.h1 {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-hero);
+    letter-spacing: var(--ls-tight);
+}
+
+h2,
+.h2 {
+    font-size: var(--fs-lg);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-tight);
+}
+
+h3,
+.h3 {
+    font-size: var(--fs-md);
+    line-height: var(--lh-heading);
+}
+
+.label-luxury {
+    font-family: var(--font-body);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--ls-widest);
+    color: var(--color-accent);
+}
+
+.editorial-italic {
+    font-family: var(--font-heading);
+    font-style: italic;
+}

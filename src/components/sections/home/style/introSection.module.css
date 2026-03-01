@@ -1,14 +1,14 @@
 .introSection {
     position: relative;
     width: 100%;
-    padding: 5rem 5vw;
-    background-color: transparent;
-    /* Rely on 3D bg */
+    padding: var(--spacing-hero) 0;
+    background: transparent;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
+    padding: 0 8vw;
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -18,7 +18,7 @@
     .container {
         flex-direction: row;
         align-items: flex-start;
-        gap: 8rem;
+        gap: 12vw;
     }
 }
 
@@ -27,69 +27,49 @@
 }
 
 .title {
-    /* color: var(--color-primary, #111); */
-    color: rgba(20, 20, 20, 0.7);
-    margin-top: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    .title {
-        color: #f1f1f1;
-    }
+    font-family: var(--font-heading);
+    color: var(--color-espresso);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2rem;
+    line-height: 1.1;
 }
 
 .content {
-    flex: 1;
+    flex: 1.2;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding-top: 1rem;
-    /* Aligns with the heading organically */
+    gap: 2.5rem;
 }
 
 .description {
-    font-family: 'Inter', sans-serif, system-ui;
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(20, 20, 20, 0.8);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
     margin: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    .description {
-        color: rgba(230, 230, 230, 0.8);
-    }
 }
 
 .footerRow {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-top: 1rem;
 }
 
 .footerText {
-    font-family: 'Playfair Display', serif, system-ui;
+    font-family: var(--font-heading);
     font-style: italic;
-    font-size: 1.25rem;
-    color: rgba(20, 20, 20, 0.6);
+    font-size: 1.5rem;
+    color: var(--color-espresso);
     white-space: nowrap;
-}
-
-@media (prefers-color-scheme: dark) {
-    .footerText {
-        color: rgba(230, 230, 230, 0.6);
-    }
+    font-weight: 300;
 }
 
 .aestheticLine {
     flex-grow: 1;
     height: 1px;
-    background: linear-gradient(90deg, rgba(20, 20, 20, 0.2) 0%, transparent 100%);
-}
-
-@media (prefers-color-scheme: dark) {
-    .aestheticLine {
-        background: linear-gradient(90deg, rgba(230, 230, 230, 0.2) 0%, transparent 100%);
-    }
+    background: var(--color-espresso);
+    opacity: 0.1;
 }

@@ -2,14 +2,36 @@
 @import "./tokens/depth.css";
 @import "./tokens/motion.css";
 @import "./tokens/spacing.css";
+@import "./tokens/typography.css";
 
 body {
-    color: var(--color-text);
+    color: var(--color-text-primary);
     background: var(--color-background);
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+/* Headings and body are now controlled by var(--fs-*) tokens in typography.css */
+
+p,
+span,
+div,
+li {
+    font-family: var(--font-body);
 }
 
 /* Base resets for cinematic feel */

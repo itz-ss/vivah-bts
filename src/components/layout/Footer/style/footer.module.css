@@ -1,39 +1,31 @@
 .footer {
     position: relative;
-    background-color: var(--color-faded-rust);
-    /* Allows global 3D background to show through */
-    /* padding-top: 8rem; */
+    background-color: var(--color-background);
+    padding-top: var(--spacing-xxl);
     overflow: hidden;
     z-index: 10;
-    /* Above the 3D background */
 }
 
 .topDivider {
     width: 100%;
     height: 1px;
     background: linear-gradient(90deg,
-            rgba(20, 20, 20, 0) 0%,
-            rgba(92, 73, 73, 0.1) 50%,
-            rgba(20, 20, 20, 0) 100%);
-    margin-bottom: 5rem;
+            transparent 0%,
+            var(--color-accent) 50%,
+            transparent 100%);
+    opacity: 0.15;
+    margin-bottom: var(--spacing-xl);
 }
 
-@media (prefers-color-scheme: dark) {
-    .topDivider {
-        background: linear-gradient(90deg,
-                rgba(255, 255, 255, 0) 0%,
-                rgba(255, 255, 255, 0.1) 50%,
-                rgba(255, 255, 255, 0) 100%);
-    }
-}
+/* Dark mode fallbacks removed for forced Light Romantic theme */
 
 .footerContainer {
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 5vw;
+    padding: 0 8vw;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: var(--spacing-xl);
 }
 
 @media (min-width: 768px) {
@@ -48,32 +40,24 @@
 }
 
 .brandLogo {
-    font-family: 'Playfair Display', serif, system-ui;
+    font-family: var(--font-heading);
     font-weight: 500;
-    font-size: 2rem;
-    letter-spacing: -0.02em;
-    color: var(--color-text, #111);
-    margin: 0 0 1rem 0;
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
 }
 
 .brandTagline {
-    font-family: 'Inter', sans-serif, system-ui;
-    font-size: 0.875rem;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(20, 20, 20, 0.6);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
     margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    .brandLogo {
-        color: #f1f1f1;
-    }
-
-    .brandTagline {
-        color: rgba(230, 230, 230, 0.6);
-    }
-}
+/* Dark mode brand styles removed */
 
 .linksSection {
     display: flex;
@@ -94,57 +78,41 @@
 }
 
 .columnTitle {
-    font-family: 'Inter', sans-serif, system-ui;
+    font-family: var(--font-body);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(20, 20, 20, 0.4);
-    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+    margin: 0 0 var(--spacing-sm) 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    .columnTitle {
-        color: rgba(230, 230, 230, 0.4);
-    }
-}
+/* Dark mode column title removed */
 
 .footerLink {
     text-decoration: none;
-    font-family: 'Inter', sans-serif, system-ui;
-    font-size: 0.875rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
     font-weight: 400;
-    color: var(--color-text, #333);
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--color-text-primary);
+    transition: all var(--transition-fast);
     transform-origin: left center;
 }
 
-@media (prefers-color-scheme: dark) {
-    .footerLink {
-        color: #dedede;
-    }
-}
-
 .footerLink:hover {
-    color: var(--color-primary, #000);
+    color: var(--color-accent);
     transform: translateX(4px);
 }
 
-@media (prefers-color-scheme: dark) {
-    .footerLink:hover {
-        color: #fff;
-    }
-}
-
 .bottomBar {
-    max-width: 1440px;
-    margin: 5rem auto 0 auto;
-    padding: 2rem 5vw;
+    max-width: 1600px;
+    margin: var(--spacing-xl) auto 0 auto;
+    padding: var(--spacing-md) 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    gap: var(--spacing-sm);
+    border-top: 1px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -154,16 +122,10 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .bottomBar {
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-}
-
 .copyright {
-    font-family: 'Inter', sans-serif, system-ui;
+    font-family: var(--font-body);
     font-size: 0.75rem;
-    color: rgba(20, 20, 20, 0.5);
+    color: var(--color-text-secondary);
     margin: 0;
 }
 
@@ -175,33 +137,17 @@
 
 .legalLink {
     text-decoration: none;
-    font-family: 'Inter', sans-serif, system-ui;
+    font-family: var(--font-body);
     font-size: 0.75rem;
-    color: rgba(20, 20, 20, 0.5);
-    transition: color 0.3s ease;
-}
-
-.separator {
-    color: rgba(20, 20, 20, 0.2);
-    font-size: 0.75rem;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .copyright,
-    .legalLink {
-        color: rgba(230, 230, 230, 0.5);
-    }
-
-    .separator {
-        color: rgba(230, 230, 230, 0.2);
-    }
-
-    .legalLink:hover {
-        color: rgba(230, 230, 230, 0.8);
-    }
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
 }
 
 .legalLink:hover {
-    color: rgba(20, 20, 20, 0.8);
+    color: var(--color-accent);
+}
+
+.separator {
+    color: var(--color-border);
+    font-size: 0.75rem;
 }

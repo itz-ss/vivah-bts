@@ -44,17 +44,17 @@ export default function StatsSection({ data }) {
 
     return (
         <section className={styles.statsSection} ref={ref}>
-            <div className={styles.container}>
+            <div className={styles.grid}>
                 {data.map((stat, idx) => (
                     <div
                         key={idx}
                         className={`${styles.statCard} ${isInView ? styles.visible : ''}`}
                         style={{ transitionDelay: `${idx * 0.15}s` }}
                     >
-                        <div className={styles.statValue}>
+                        <div className={styles.number}>
                             <AnimatedCounter value={stat.value} isInView={isInView} />
                         </div>
-                        <div className={styles.statLabel}>{stat.label}</div>
+                        <div className={styles.label}>{stat.label}</div>
                     </div>
                 ))}
             </div>

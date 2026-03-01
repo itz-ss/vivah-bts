@@ -4,6 +4,7 @@ import StatsSection from './StatsSection';
 import FeaturedPortfolio from './FeaturedPortfolio';
 import BrochureSection from './BrochureSection';
 import GearSection from './GearSection';
+import FunnelCTA from './FunnelCTA';
 
 export default function LandingPage({ data }) {
     if (!data) return null;
@@ -16,6 +17,7 @@ export default function LandingPage({ data }) {
             <FeaturedPortfolio data={data.featuredPortfolio} />
             <BrochureSection data={data.brochure} />
             <GearSection data={data.gear} />
+            <FunnelCTA data={data.funnelCta} />
         </main>
     );
 }

@@ -207,12 +207,15 @@ a.detailValue:hover {
     color: var(--color-background, #fff);
     background: var(--color-text, #111);
     border: none;
-    padding: 1.25rem 3rem;
+    padding: 1.25rem 2.5rem;
     border-radius: 100px;
     margin-top: 1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -230,5 +233,74 @@ a.detailValue:hover {
 @media (prefers-color-scheme: dark) {
     .submitBtn:hover {
         box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.submitBtnSuccess {
+    background: #1da851;
+    cursor: default;
+    transform: none !important;
+}
+
+.submitIcon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* Trust Signals */
+.trustSignals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 3rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s;
+}
+
+.trustSignals.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trustSignal {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.85rem;
+    color: rgba(20, 20, 20, 0.55);
+    letter-spacing: 0.02em;
+}
+
+@media (prefers-color-scheme: dark) {
+    .trustSignal {
+        color: rgba(230, 230, 230, 0.5);
+    }
+}
+
+.trustDot {
+    font-size: 0.6rem;
+    opacity: 0.5;
+}
+
+/* Form note below submit */
+.formNote {
+    font-family: 'Inter', sans-serif, system-ui;
+    font-size: 0.75rem;
+    color: rgba(20, 20, 20, 0.4);
+    letter-spacing: 0.03em;
+    margin-top: -0.75rem;
+}
+
+.formNote span {
+    opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+    .formNote {
+        color: rgba(230, 230, 230, 0.35);
     }
 }
