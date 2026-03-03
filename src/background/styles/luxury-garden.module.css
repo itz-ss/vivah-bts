@@ -1,0 +1,71 @@
+/* =========================
+   LUXURY GARDEN - MASTER FX
+   
+   🎨 Color System: RGB-based
+   All colors converted from HSL to RGB for:
+   - Performance optimization
+   - Better color space consistency
+   - Improved dynamic color manipulation
+   - Enhanced modularity with CSS custom properties
+   
+   Color References:
+   - Golden (HSL 45°, 60%, 80%) → rgb(219, 207, 147)
+   - Emerald (HSL 150°, 50%, 70%) → rgb(127, 193, 170)
+   - Forest (HSL 120°, 50%, 70%) → rgb(127, 193, 89)
+   - Haze (HSL 150°, 20%, 15%) → rgb(26, 47, 35)
+========================= */
+
+.atmosphereContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* 🌿 High-Fidelity Pollen / Glitter Particles */
+.particle {
+    position: absolute;
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 80%);
+    border-radius: 50%;
+    filter: blur(1px);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+/* 🌅 Cinematic Environment */
+.bloomLayer {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%,
+            var(--color-golden-soft-rgba) 0%,
+            transparent 70%);
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hazeContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.depthHaze {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            var(--color-haze-dark-light) 50%,
+            var(--color-haze-dark-medium) 100%);
+    opacity: 0.8;
+}
+
+/* Page Transition Layer */
+.pageTransition {
+    position: fixed;
+    inset: 0;
+    background: var(--color-base);
+    z-index: 9999;
+    pointer-events: none;
+}

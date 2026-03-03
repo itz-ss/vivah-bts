@@ -26,6 +26,26 @@
     --bg-primary: var(--color-background);
     --bg-secondary: var(--color-glass);
     --accent-primary: var(--color-accent);
+
+    /* ================================
+       Luxury Background RGB Palette
+       (Converted from HSL for consistency)
+       ================================ */
+    
+    /* Golden Tones (HSL: 45°, 60%, 80%) */
+    --color-golden-soft: rgb(219, 207, 147);
+    --color-golden-soft-rgba: rgba(219, 207, 147, 0.08);
+    
+    /* Emerald & Sage (HSL: 150°, 50%, 70%) */
+    --color-emerald-soft: rgb(127, 193, 170);
+    
+    /* Forest Green (HSL: 120°, 50%, 70%) */
+    --color-forest-soft: rgb(127, 193, 89);
+    
+    /* Deep Background Tones */
+    --color-haze-dark: rgb(26, 47, 35);
+    --color-haze-dark-light: rgba(26, 47, 35, 0.05);
+    --color-haze-dark-medium: rgba(26, 47, 35, 0.15);
 }
 
 /* Enforce French Romantic Editorial (Definitive Light Theme) */

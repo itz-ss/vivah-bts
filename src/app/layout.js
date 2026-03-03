@@ -4,7 +4,7 @@ import Footer from "../components/layout/Footer/Footer";
 import sitedata from "../data/site.json";
 import WhatsAppFloatingButton from "../components/ui/WhatsAppFloatingButton/WhatsAppFloatingButton";
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
-import InteractiveBackground from "../components/layout/InteractiveBackground/InteractiveBackground";
+import GlobalLuxuryBg from "@/background/GlobalLuxuryBg";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -202,7 +202,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <InteractiveBackground />
+        <GlobalLuxuryBg/>
         <Navbar />
         <main>{children}</main>
         <Footer />
