@@ -1,68 +1,42 @@
 "use client";
 
-import React from "react";
-import InteractiveBotanicalBg from "./InteractiveBotanicalBg";
-import FloatingAtmosphere from "./FloatingAtmosphere";
-import GardenLightBloom from "./GardenLightBloom";
-import DepthHaze from "./DepthHaze";
+import styles from "./style/globalBg.module.css";
 
-/**
- * GlobalLuxuryBg - The ultra-premium background system.
- * Combines generative canvas particles with multi-layered environmental effects.
- * Designed to be globally persistent in layout.js.
- */
 export default function GlobalLuxuryBg() {
     return (
-        <div
-            className="global-luxury-bg-system"
-            style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                zIndex: -1,
-                overflow: "hidden",
-                pointerEvents: "none", // Allows clicks to pass through to content, but canvas has its own listeners
-                background: "var(--color-background, #0B120E)",
-            }}
-        >
-            {/* Layer 1: Base Dark Atmosphere */}
-            <div
-                style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "radial-gradient(circle at 50% 50%, var(--color-parchment) 0%, var( --color-espresso) 100%)",
-                }}
-            />
-
-            {/* Layer 2: Interactive Generative Canvas (Pollen/Petals) */}
-            <div style={{ position: "absolute", inset: 0, zIndex: 1 }}>
-                <InteractiveBotanicalBg />
-            </div>
-
-            {/* Layer 3: Floating Botanical Particles */}
-            <div style={{ position: "absolute", inset: 0, zIndex: 2 }}>
-                <FloatingAtmosphere />
-            </div>
-
-            {/* Layer 4: Cinematic Bloom and Haze */}
-            <div style={{ position: "absolute", inset: 0, zIndex: 3 }}>
-                <GardenLightBloom />
-                <DepthHaze />
-            </div>
-
-            {/* Layer 5: Subtle Grain/Texture Overlay */}
-            <div
-                style={{
-                    position: "absolute",
-                    inset: 0,
-                    zIndex: 4,
-                    opacity: 0.03,
-                    pointerEvents: "none",
-                    backgroundImage: `url("https://www.transparenttextures.com/patterns/stardust.png")`,
-                }}
-            />
+        <div className={styles.globalBgContainer}>
+            {/* Base Background Color (from theme) */}
+            <div className={styles.baseColor} />
+            
+            {/* SVG Noise / Rough Paper Texture */}
+            <svg
+                className={styles.paperTextureSvg}
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <filter id="roughpaper">
+                    {/* Generates fractal noise for a rough, grainy feel */}
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.04"
+                        numOctaves="5"
+                        result="noise"
+                    />
+                    {/* Desaturates the noise to make it greyscale */}
+                    <feColorMatrix
+                        type="matrix"
+                        values="1 0 0 0 0
+                                1 0 0 0 0
+                                1 0 0 0 0
+                                0 0 0 0.15 0"
+                        in="noise"
+                        result="coloredNoise"
+                    />
+                </filter>
+                <rect width="100%" height="100%" filter="url(#roughpaper)" />
+            </svg>
+            
+            {/* Vignette Overlay for cinematic depth */}
+            <div className={styles.vignetteOverlay} />
         </div>
     );
 }

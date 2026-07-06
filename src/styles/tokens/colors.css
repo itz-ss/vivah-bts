@@ -1,54 +1,51 @@
 :root {
-    /* French Romantic Minimalist Palette — Awwwards Grade */
-    --color-parchment: #F5F1ED;
-    /* Creamy Paper Base */
-    --color-espresso: #3C2F2F;
-    /* Deep Chocolate Contrast */
+    /* Premium Romantic Pink Palette */
+    --color-background: #FFF0F5;
+    /* Soft Blush Pink / Lavender Blush */
+    --color-surface: #FFE4E1;
+    /* Light Rose / Misty Rose for cards/surfaces */
 
-    /* Core Mapping */
-    --color-background: var(--color-parchment);
-    --color-surface: #FFFFFF;
+    --color-text-primary: #000000;
+    /* True Black */
+    --color-text-secondary: rgba(0, 0, 0, 0.65);
+    /* Faded Black / Charcoal */
 
-    --color-text-primary: var(--color-espresso);
-    --color-text-secondary: rgba(60, 47, 47, 0.7);
-    /* Faded Espresso */
+    --color-accent: #D87093;
+    /* Pale Violet Red / Deep Rose */
+    --color-accent-soft: rgba(216, 112, 147, 0.15);
+    /* Rose Glow */
 
-    /* Constraint: No auxiliary accents (Gold/Pink removed) */
-    --color-accent: var(--color-espresso);
-    --color-accent-soft: rgba(60, 47, 47, 0.05);
-
-    --color-border: rgba(60, 47, 47, 0.1);
-    --color-glass: rgba(245, 241, 237, 0.85);
+    --color-border: rgba(216, 112, 147, 0.2);
+    /* Soft pink border */
+    --color-glass: rgba(255, 240, 245, 0.75);
+    /* Light Pink Glassmorphism */
+    
     --color-white: #FFFFFF;
-    --color-black: #1A1A1A;
+    --color-black: #000000;
 
-    /* Legacy Aliases for architectural stability */
+    /* Legacy Aliases */
     --bg-primary: var(--color-background);
     --bg-secondary: var(--color-glass);
     --accent-primary: var(--color-accent);
 
     /* ================================
        Luxury Background RGB Palette
-       (Converted from HSL for consistency)
        ================================ */
     
-    /* Golden Tones (HSL: 45°, 60%, 80%) */
-    --color-golden-soft: rgb(219, 207, 147);
-    --color-golden-soft-rgba: rgba(219, 207, 147, 0.08);
+    /* Romantic Rose Dust */
+    --color-golden-soft: rgb(216, 112, 147);
+    --color-golden-soft-rgba: rgba(216, 112, 147, 0.15);
     
-    /* Emerald & Sage (HSL: 150°, 50%, 70%) */
-    --color-emerald-soft: rgb(127, 193, 170);
-    
-    /* Forest Green (HSL: 120°, 50%, 70%) */
-    --color-forest-soft: rgb(127, 193, 89);
+    /* Warm Highlights */
+    --color-peach-soft: rgb(255, 182, 193); /* Light Pink */
     
     /* Deep Background Tones */
-    --color-haze-dark: rgb(26, 47, 35);
-    --color-haze-dark-light: rgba(26, 47, 35, 0.05);
-    --color-haze-dark-medium: rgba(26, 47, 35, 0.15);
+    --color-haze-dark: rgb(255, 240, 245);
+    --color-haze-dark-light: rgba(255, 240, 245, 0.4);
+    --color-haze-dark-medium: rgba(255, 240, 245, 0.8);
 }
 
-/* Enforce French Romantic Editorial (Definitive Light Theme) */
+/* Enforce Cinematic Light Theme */
 :root {
     color-scheme: light;
 }

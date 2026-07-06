@@ -29,7 +29,6 @@ export async function GET(request) {
     return Response.json(data);
 
   } catch (error) {
-    console.error("Instagram API Route error:", error);
     return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }

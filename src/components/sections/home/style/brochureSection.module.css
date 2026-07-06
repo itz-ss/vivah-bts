@@ -29,7 +29,7 @@
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     transition: all 1.2s var(--transition-luxury);
-    filter: drop-shadow(0 30px 60px rgba(60, 47, 47, 0.05));
+    filter: drop-shadow(0 30px 60px rgba(216, 112, 147, 0.15));
 }
 
 .imageColumn.visible {
@@ -54,7 +54,8 @@
 
 .title {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
+    color: var(--color-text-primary);
 }
 
 .description {
@@ -88,17 +89,18 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-parchment);
-    background: var(--color-espresso);
+    color: var(--color-background);
+    background: var(--color-accent);
     text-decoration: none;
     padding: 1.4rem 4rem;
-    border-radius: 0;
+    border-radius: 2px;
     transition: all var(--transition-fast);
-    border: 1px solid var(--color-espresso);
+    border: 1px solid var(--color-accent);
 }
 
 .downloadBtn:hover {
     background: transparent;
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
 }

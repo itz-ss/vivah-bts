@@ -28,9 +28,9 @@
 
 .title {
     font-family: var(--font-heading);
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     margin-bottom: 2rem;
     line-height: 1.1;
@@ -62,7 +62,7 @@
     font-family: var(--font-heading);
     font-style: italic;
     font-size: 1.5rem;
-    color: var(--color-espresso);
+    color: var(--color-accent);
     white-space: nowrap;
     font-weight: 300;
 }
@@ -70,6 +70,6 @@
 .aestheticLine {
     flex-grow: 1;
     height: 1px;
-    background: var(--color-espresso);
-    opacity: 0.1;
+    background: var(--color-accent);
+    opacity: 0.2;
 }

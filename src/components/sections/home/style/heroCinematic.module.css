@@ -1,100 +1,131 @@
 .heroSection {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: var(--color-parchment);
+    background: transparent; /* Allows novel background to show through */
+    padding: 10rem 5vw 6rem 5vw;
 }
 
-.videoWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
+.container {
+    max-width: 1440px;
     width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: var(--color-parchment);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+    z-index: 2;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 6rem;
+    }
+}
+
+/* ===============================
+   Text Column (Editorial Book-Cover Look)
+================================ */
+
+.textColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.overline {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.editorialTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin: 0 0 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.titleLine {
+    display: block;
+}
+
+.italic {
+    font-style: italic;
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    padding-left: 1rem;
+}
+
+.description {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--color-text-secondary);
+    max-width: 540px;
+    margin: 0 0 3rem 0;
+}
+
+/* ===============================
+   Media Column (Framed Novel Portrait/Landscape)
+================================ */
+
+.mediaColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.frameWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 4 / 5; /* Elegant book ratio */
+    border: 1px solid var(--color-border);
+    padding: 1.5rem; /* Indented frame spacing */
+    background: var(--color-surface); /* Pink tinted paper frame */
+    box-shadow: var(--shadow-glass);
+    border-radius: 4px;
+}
+
+.innerAccentFrame {
+    position: absolute;
+    inset: 2rem;
+    border: 1px dashed var(--color-accent);
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.5;
 }
 
 .heroVideo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(0.15) contrast(1.05) brightness(0.95);
-    /* French vintage film look */
+    filter: brightness(0.9) contrast(1.05) saturate(0.95);
+    border-radius: 2px;
 }
 
-/* French Romantic Overlay */
-.videoOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        linear-gradient(to bottom,
-            rgba(245, 241, 237, 0.4) 0%,
-            rgba(245, 241, 237, 0.1) 50%,
-            rgba(245, 241, 237, 0.6) 100%);
-    z-index: 1;
-}
-
-.contentContainer {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: contentFadeUp 1.5s var(--transition-luxury) forwards;
-    opacity: 1;
-    /* Ensure base opacity is 1 before animation */
-}
-
-@keyframes contentFadeUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.title {
-    font-family: var(--font-heading);
-    font-size: var(--fs-hero);
-    line-height: var(--lh-hero);
-    letter-spacing: -0.02em;
-    color: var(--color-espresso);
-    margin-bottom: var(--spacing-lg);
-    font-weight: 400;
-}
-
-.titleEditorial {
-    font-style: italic;
-    display: block;
-    font-weight: 300;
-}
-
-.description {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--color-text-secondary);
-    max-width: 550px;
-    margin-bottom: var(--spacing-xl);
-    letter-spacing: 0.05em;
-}
+/* ===============================
+   CTA Button
+================================ */
 
 .ctaWrapper {
-    margin-top: 1rem;
+    display: flex;
 }
 
 .primaryCta {
@@ -102,12 +133,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.25rem 4rem;
-    border: 1px solid var(--color-espresso);
+    padding: 1.4rem 4.5rem;
+    border: 1px solid var(--color-accent);
     text-decoration: none;
-    border-radius: 0;
+    border-radius: 2px;
     transition: all var(--transition-luxury);
-    background: var(--color-espresso);
+    background: transparent;
+    overflow: hidden;
+}
+
+.primaryCta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-accent);
+    opacity: 0.05;
+    transition: opacity var(--transition-luxury);
 }
 
 .ctaText {
@@ -116,21 +157,32 @@
     font-weight: 500;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--color-parchment);
+    color: var(--color-text-primary);
     z-index: 2;
+    transition: color var(--transition-luxury);
 }
 
 .primaryCta:hover {
-    background: transparent;
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-text-primary);
+}
+
+.primaryCta:hover::before {
+    opacity: 1;
+    background: var(--color-text-primary);
 }
 
 .primaryCta:hover .ctaText {
-    color: var(--color-espresso);
+    color: var(--color-background);
 }
+
+/* ===============================
+   Scroll Indicator
+================================ */
 
 .scrollIndicator {
     position: absolute;
-    bottom: 3rem;
+    bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -145,14 +197,14 @@
     font-size: 0.6rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--color-espresso);
-    opacity: 0.5;
+    color: var(--color-text-secondary);
+    opacity: 0.6;
 }
 
 .scrollLine {
     width: 1px;
-    height: 50px;
-    background: rgba(60, 47, 47, 0.1);
+    height: 40px;
+    background: var(--color-border);
     position: relative;
     overflow: hidden;
 }
@@ -163,8 +215,9 @@
     left: 0;
     width: 100%;
     height: 15px;
-    background: var(--color-espresso);
+    background: var(--color-accent);
     animation: scrollLoop 2.5s var(--transition-luxury) infinite;
+    box-shadow: 0 0 10px var(--color-accent);
 }
 
 @keyframes scrollLoop {
@@ -173,6 +226,6 @@
     }
 
     100% {
-        transform: translateY(400%);
+        transform: translateY(300%);
     }
 }

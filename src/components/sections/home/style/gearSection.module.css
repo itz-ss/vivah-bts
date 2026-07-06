@@ -24,6 +24,7 @@
 .subtitle {
     margin-top: 1.5rem;
     line-height: 1.6;
+    color: var(--color-text-secondary);
 }
 
 .grid {
@@ -64,44 +65,31 @@
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
-    /* Elegant circular framing for gear */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 2rem; */
-    transition: background 0.4s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-    .imageWrapper {
-        background: rgba(255, 255, 255, 0.03);
-    }
+    transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .card:hover .imageWrapper {
-    background: rgba(0, 0, 0, 0.06);
-}
-
-@media (prefers-color-scheme: dark) {
-    .card:hover .imageWrapper {
-        background: rgba(255, 255, 255, 0.06);
-    }
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-glow);
 }
 
 .image {
     width: 200%;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(0.8);
     opacity: 0.7;
     transition: filter 0.5s ease, opacity 0.5s ease;
     border-radius: 50%;
 }
 
 .card:hover .image {
-    filter: grayscale(0%);
+    filter: grayscale(0%) brightness(1);
     opacity: 1;
 }
 
@@ -111,28 +99,16 @@
     font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-text, #111);
+    color: var(--color-text-primary);
     text-align: center;
     margin: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-    .gearName {
-        color: #f1f1f1;
-    }
 }
 
 .aestheticLine {
     width: 0;
     height: 1px;
-    background-color: var(--color-text, #111);
+    background-color: var(--color-accent);
     transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-    .aestheticLine {
-        background-color: #f1f1f1;
-    }
 }
 
 .card:hover .aestheticLine {

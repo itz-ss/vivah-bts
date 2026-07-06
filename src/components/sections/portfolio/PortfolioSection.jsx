@@ -52,7 +52,6 @@ export default function PortfolioSection() {
       // Update cursor for next page
       setCursor(data.paging?.cursors?.after || null);
     } catch (err) {
-      console.error("[Senior Dev Log] Instagram Fetch Error:", err);
       setError("Unable to load latest works. Please try again later.");
     } finally {
       setLoading(false);

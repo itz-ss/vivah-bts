@@ -1,4 +1,4 @@
-/* Designer Navbar Styles – French Romantic Minimalist */
+/* Designer Navbar Styles – Cinematic Dark */
 
 .navbar {
     position: fixed;
@@ -16,8 +16,7 @@
     background-color: var(--color-glass);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 10px 40px rgba(60, 47, 47, 0.03);
-    /* Minimalist espresso shadow */
+    box-shadow: 0 10px 40px rgba(216, 112, 147, 0.1);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -32,7 +31,7 @@
 
 .logoText {
     font-family: var(--font-heading);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.75rem;
     letter-spacing: -0.01em;
     color: var(--color-text-primary);
@@ -47,13 +46,13 @@
     gap: 3.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .navLinks {
         display: flex;
     }
 }
 
-/* ── French Romantic Call Button ── */
+/* ── Cinematic Call Button ── */
 .callBtn {
     display: none;
     align-items: center;
@@ -64,19 +63,17 @@
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-parchment);
-    /* Parchment text on Espresso */
-    background-color: var(--color-espresso);
-    border: 1px solid var(--color-espresso);
-    border-radius: 0;
-    /* Strict angular French romanticism */
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: 2px;
     padding: 0.7rem 1.8rem;
     transition: all var(--transition-fast);
     position: relative;
     z-index: 1001;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .callBtn {
         display: flex;
     }
@@ -84,8 +81,9 @@
 
 .callBtn:hover {
     background: transparent;
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
 }
 
 .callIcon {
@@ -115,14 +113,15 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--color-espresso);
+    background-color: var(--color-accent);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform var(--transition-luxury);
 }
 
 .navLink:hover {
-    opacity: 0.6;
+    opacity: 0.8;
+    color: var(--color-accent);
 }
 
 .navLink:hover::after {
@@ -143,7 +142,7 @@
     z-index: 1001;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .hamburger {
         display: none;
     }
@@ -152,7 +151,7 @@
 .hamburgerLine {
     width: 100%;
     height: 1px;
-    background-color: var(--color-espresso);
+    background-color: var(--color-text-primary);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -162,7 +161,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-parchment);
+    background-color: var(--color-surface);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -191,7 +190,25 @@
     text-decoration: none;
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     display: block;
+    font-weight: 300;
     font-style: italic;
+}
+
+.mobileCallBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-background);
+    background-color: var(--color-accent);
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 2px;
 }

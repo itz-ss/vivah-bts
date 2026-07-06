@@ -17,8 +17,6 @@
     margin-bottom: var(--spacing-xl);
 }
 
-/* Dark mode fallbacks removed for forced Light Romantic theme */
-
 .footerContainer {
     max-width: 1600px;
     margin: 0 auto;
@@ -41,7 +39,7 @@
 
 .brandLogo {
     font-family: var(--font-heading);
-    font-weight: 500;
+    font-weight: 300;
     font-size: 2.25rem;
     letter-spacing: -0.01em;
     color: var(--color-text-primary);
@@ -56,8 +54,6 @@
     color: var(--color-text-secondary);
     margin: 0;
 }
-
-/* Dark mode brand styles removed */
 
 .linksSection {
     display: flex;
@@ -87,8 +83,6 @@
     margin: 0 0 var(--spacing-sm) 0;
 }
 
-/* Dark mode column title removed */
-
 .footerLink {
     text-decoration: none;
     font-family: var(--font-body);
@@ -102,6 +96,7 @@
 .footerLink:hover {
     color: var(--color-accent);
     transform: translateX(4px);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
 .bottomBar {

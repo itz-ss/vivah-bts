@@ -5,6 +5,7 @@ import sitedata from "../data/site.json";
 import WhatsAppFloatingButton from "../components/ui/WhatsAppFloatingButton/WhatsAppFloatingButton";
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import GlobalLuxuryBg from "@/background/GlobalLuxuryBg";
+import SmoothScroller from "../components/layout/SmoothScroller";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -127,8 +128,13 @@ export default function RootLayout({ children }) {
                 { "@type": "City", "name": "Lucknow" },
                 { "@type": "City", "name": "Prayagraj" },
                 { "@type": "City", "name": "Agra" },
+                { "@type": "City", "name": "Varanasi" },
                 { "@type": "City", "name": "Delhi" },
                 { "@type": "State", "name": "Uttar Pradesh" },
+                { "@type": "State", "name": "Bihar" },
+                { "@type": "State", "name": "Haryana" },
+                { "@type": "State", "name": "Madhya Pradesh" },
+                { "@type": "State", "name": "Rajasthan" },
                 { "@type": "Country", "name": "India" },
               ],
               "openingHoursSpecification": [
@@ -202,11 +208,13 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <GlobalLuxuryBg/>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <WhatsAppFloatingButton />
+        <SmoothScroller>
+          <GlobalLuxuryBg/>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppFloatingButton />
+        </SmoothScroller>
       </body>
     </html>
   );

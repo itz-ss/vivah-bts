@@ -129,7 +129,6 @@ export default function FeaturedPortfolio({ data }) {
                 const latest = posts.slice(0, 4);
                 setTopPosts(latest);
             } catch (err) {
-                console.error("Instagram fetch failed:", err);
                 setUseFallback(true);
             } finally {
                 setLoading(false);

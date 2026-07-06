@@ -1,6 +1,6 @@
 /* =========================
    SECTION BASE
-========================= */
+ ========================= */
 
 .faq-section {
   background: transparent;
@@ -9,7 +9,7 @@
 
 /* =========================
    HEADER
-========================= */
+ ========================= */
 
 .faq-header {
   max-width: 720px;
@@ -17,12 +17,9 @@
   text-align: center;
 }
 
-/* PremiumTextReveal handles typography & animation */
-
-
 /* =========================
    FAQ LIST
-========================= */
+ ========================= */
 
 .faq-list {
   max-width: 800px;
@@ -31,7 +28,7 @@
 
 /* =========================
    FAQ ITEM
-========================= */
+ ========================= */
 
 .faq-item {
   border-bottom: 1px solid var(--color-border);
@@ -41,14 +38,13 @@
 
 /* subtle cinematic hover */
 .faq-item:hover {
-  background: rgba(252, 179, 169, 0.04);
+  background: var(--color-accent-soft);
   border-radius: 12px;
 }
 
-
 /* =========================
    QUESTION BUTTON
-========================= */
+ ========================= */
 
 .faq-question {
   width: 100%;
@@ -62,7 +58,7 @@
   font-weight: 600;
   letter-spacing: 0.2px;
 
-  color: var(--color-text);
+  color: var(--color-text-primary);
   cursor: pointer;
 
   padding: clamp(0.9rem, 2vw, 1.15rem) clamp(1.1rem, 3vw, 1.6rem);
@@ -71,11 +67,11 @@
   touch-action: manipulation;
 
   /* glass aesthetic */
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  box-shadow: var(--glass-shadow);
+  background: var(--color-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
 
   transition:
     transform .25s ease,
@@ -85,14 +81,10 @@
 }
 
 .faq-question:hover {
-  border-color: rgba(252, 179, 169, 0.35);
-  background: linear-gradient(
-    135deg,
-    rgba(252, 179, 169, 0.12),
-    rgba(176, 213, 192, 0.12)
-  );
+  border-color: var(--color-accent);
+  background: var(--color-surface);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(252, 179, 169, 0.12);
+  box-shadow: var(--shadow-glow);
 }
 
 .faq-question:active {
@@ -108,7 +100,7 @@
 
 /* =========================
    ICON
-========================= */
+ ========================= */
 
 .faq-icon {
   font-size: 1.4rem;
@@ -132,7 +124,7 @@
 
 /* =========================
    ANSWER (MODERN SMOOTH COLLAPSE)
-========================= */
+ ========================= */
 
 .faq-answer {
   display: grid;
@@ -142,7 +134,7 @@
 
 .faq-answer p {
   overflow: hidden;
-  color: var(--color-muted);
+  color: var(--color-text-secondary);
   font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 2.5;
   margin-top: 10px;
@@ -155,15 +147,15 @@
 
 /* =========================
    OPEN STATE ENHANCEMENT
-========================= */
+ ========================= */
 
 .faq-item.open {
-  border-color: rgba(252, 179, 169, 0.35);
+  border-color: var(--color-accent);
 }
 
 /* =========================
    RESPONSIVE TUNING
-========================= */
+ ========================= */
 
 @media (min-width: 768px) {
   .faq-section {
@@ -193,34 +185,12 @@
 
 /* =========================
    ACCESSIBILITY
-========================= */
+ ========================= */
 
 @media (prefers-reduced-motion: reduce) {
   .faq-question,
   .faq-answer,
   .faq-icon {
     transition: none !important;
-  }
-}
-
-/* =========================
-   DARK MODE
-========================= */
-
-@media (prefers-color-scheme: dark) {
-
-  .faq-item:hover {
-    background: rgba(252, 179, 169, 0.03);
-  }
-
-  .faq-question {
-    background: rgba(252, 179, 169, 0.08);
-    border-color: rgba(252, 179, 169, 0.18);
-  }
-
-  .faq-question:hover {
-    background: rgba(252, 179, 169, 0.14);
-    border-color: rgba(252, 179, 169, 0.28);
-    box-shadow: 0 6px 18px rgba(252, 179, 169, 0.08);
   }
 }

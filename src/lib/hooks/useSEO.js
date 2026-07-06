@@ -267,8 +267,8 @@ export function useWebVitals() {
         onFID(handleWebVitals);
         onCLS(handleWebVitals);
       });
-    } catch (e) {
-      console.log('web-vitals not installed');
+    } catch {
+      // web-vitals package not available
     }
   }, []);
 }

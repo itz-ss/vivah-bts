@@ -32,13 +32,8 @@
     aspect-ratio: 9 / 16;
     overflow: hidden;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.05);
-}
-
-@media (prefers-color-scheme: dark) {
-    .imageWrapper {
-        background: rgba(255, 255, 255, 0.05);
-    }
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
 }
 
 .image {
@@ -53,7 +48,7 @@
 }
 
 .card:focus-visible .imageWrapper {
-    outline: 2px solid var(--color-text, #111);
+    outline: 2px solid var(--color-accent);
     outline-offset: 4px;
 }
 
@@ -63,7 +58,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 240, 245, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,12 +78,14 @@
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--color-background);
+    background: var(--color-accent);
     padding: 1rem 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--color-accent);
     border-radius: 100px;
     transform: translateY(10px);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-glow);
 }
 
 .card:hover .playText {
@@ -106,7 +103,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(20, 20, 20, 0.5);
+    color: var(--color-text-secondary);
 }
 
 .title {
@@ -114,7 +111,7 @@
     font-size: 1rem;
     line-height: 1.6;
     font-weight: 400;
-    color: var(--color-text, #111);
+    color: var(--color-text-primary);
     margin: 0;
     display: -webkit-box;
     line-clamp: 2;
@@ -123,37 +120,21 @@
     overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-    .category {
-        color: rgba(230, 230, 230, 0.5);
-    }
-
-    .title {
-        color: #f1f1f1;
-    }
-}
-
 /* Skeletons */
 .skeleton {
     width: 100%;
     aspect-ratio: 9 / 16;
     border-radius: 4px;
-    background: var(--color-border, #eee);
+    background: var(--color-border);
     position: relative;
     overflow: hidden;
-}
-
-@media (prefers-color-scheme: dark) {
-    .skeleton {
-        background: #222;
-    }
 }
 
 .skeleton::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     animation: skeleton-wave 1.5s infinite;
 }
 

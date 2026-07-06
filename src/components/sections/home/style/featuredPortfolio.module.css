@@ -1,5 +1,5 @@
 /* ===============================
-   Featured Portfolio Section – French Minimalist
+   Featured Portfolio Section – Cinematic Dark
 ================================ */
 
 .portfolioSection {
@@ -21,19 +21,21 @@
 .header {
     text-align: left;
     margin-bottom: var(--spacing-xxl);
-    border-left: 1px solid var(--color-espresso);
+    border-left: 2px solid var(--color-accent);
     padding-left: 2rem;
 }
 
 .title {
     margin: 0;
-    font-weight: 400;
+    font-weight: 300;
+    color: var(--color-text-primary);
 }
 
 .subtitle {
     margin-top: 12px;
     font-style: italic;
-    opacity: 0.6;
+    opacity: 0.8;
+    color: var(--color-accent);
 }
 
 /* ===============================
@@ -60,10 +62,8 @@
     transform: translateY(40px);
     cursor: pointer;
     background: var(--color-surface);
-    /* Pure white surface */
     border: 1px solid var(--color-border);
-    /* Fine stationery border */
-    border-radius: 0;
+    border-radius: 4px;
 }
 
 .card:global(.visible),
@@ -74,17 +74,16 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(60, 47, 47, 0.04);
-    border-color: var(--color-espresso);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-accent);
 }
 
 .imageWrapper {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 5;
-    /* Standardized editorial ratio */
     overflow: hidden;
-    background: var(--color-parchment);
+    background: var(--color-background);
 }
 
 .video,
@@ -93,12 +92,13 @@
     height: 100%;
     object-fit: cover;
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: sepia(0.05) contrast(1.02);
+    filter: brightness(0.8) contrast(1.1);
 }
 
 .card:hover .video,
 .card:hover .image {
     transform: scale(1.05);
+    filter: brightness(1) contrast(1.1);
 }
 
 .muteBtn {
@@ -107,10 +107,10 @@
     right: 12px;
     width: 32px;
     height: 32px;
-    background: rgba(245, 241, 237, 0.6);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
     border: 1px solid var(--color-border);
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,11 +118,13 @@
     z-index: 10;
     padding: 7px;
     transition: all 0.3s ease;
+    border-radius: 50%;
 }
 
 .muteBtn:hover {
-    background: var(--color-espresso);
-    color: var(--color-parchment);
+    background: var(--color-accent);
+    color: var(--color-background);
+    border-color: var(--color-accent);
 }
 
 /* ===============================
@@ -132,7 +134,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(60, 47, 47, 0.3) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(255, 240, 245, 0.8) 0%, transparent 60%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,14 +147,16 @@
 }
 
 .viewText {
-    color: var(--color-parchment);
+    color: var(--color-background);
+    background: var(--color-accent);
     font-size: 0.65rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    font-weight: 500;
-    border: 1px solid var(--color-parchment);
+    font-weight: 600;
+    border: 1px solid var(--color-accent);
     padding: 0.8rem 1.6rem;
     backdrop-filter: blur(4px);
+    border-radius: 2px;
 }
 
 /* ===============================
@@ -173,17 +177,17 @@
     font-size: 0.6rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--color-espresso);
+    color: var(--color-accent);
     font-weight: 600;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .cardTitle {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 1.1rem;
+    font-weight: 300;
     line-height: 1.5;
     font-family: var(--font-heading);
-    color: var(--color-espresso);
+    color: var(--color-text-primary);
     margin: 0;
     display: -webkit-box;
     line-clamp: 2;
@@ -205,8 +209,8 @@
     display: inline-block;
     padding: 1.25rem 4.5rem;
     background: transparent;
-    border: 1px solid var(--color-espresso);
-    color: var(--color-espresso);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text-primary);
     text-decoration: none;
     font-family: var(--font-body);
     font-size: 0.75rem;
@@ -217,9 +221,10 @@
 }
 
 .viewAllBtn:hover {
-    background: var(--color-espresso);
-    color: var(--color-parchment);
+    background: var(--color-accent);
+    color: var(--color-background);
     transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
 }
 
 /* ===============================
@@ -229,11 +234,12 @@
 .cardSkeleton {
     aspect-ratio: 4 / 5;
     background: linear-gradient(90deg,
-            rgba(60, 47, 47, 0.02) 25%,
-            rgba(60, 47, 47, 0.05) 50%,
-            rgba(60, 47, 47, 0.02) 75%);
+            rgba(255, 255, 255, 0.02) 25%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.02) 75%);
     background-size: 400% 100%;
     animation: shimmer 1.5s infinite linear;
+    border-radius: 4px;
 }
 
 @keyframes shimmer {

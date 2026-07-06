@@ -44,17 +44,17 @@ export default function InteractiveBotanicalBg() {
                 this.speedX = (Math.random() - 0.5) * 0.4;
                 this.speedY = (Math.random() - 0.5) * 0.4;
 
-                // Luxury Palette: Gold, Emerald, Soft Sage (RGB-based)
+                // Luxury Palette: Romantic Pink Dust
                 const rolls = Math.random();
-                if (rolls > 0.8) {
-                    // Golden
-                    this.color = { h: 45, s: 60, l: 80 };
-                } else if (rolls > 0.4) {
-                    // Emerald/Sage
-                    this.color = { h: 150, s: 50, l: 70 };
+                if (rolls > 0.6) {
+                    // Deep Rose
+                    this.color = { h: 340, s: 60, l: 65 };
+                } else if (rolls > 0.3) {
+                    // Blush Pink
+                    this.color = { h: 350, s: 80, l: 85 };
                 } else {
-                    // Forest
-                    this.color = { h: 120, s: 50, l: 70 };
+                    // Pale Magenta
+                    this.color = { h: 330, s: 50, l: 75 };
                 }
 
                 this.opacity = Math.random() * 0.4 + 0.1;
@@ -163,7 +163,7 @@ export default function InteractiveBotanicalBg() {
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < 180) {
                         const alpha = (1 - dist / 180) * 0.1;
-                        ctx.strokeStyle = hslToRgbString(45, 50, 80, alpha);
+                        ctx.strokeStyle = hslToRgbString(340, 60, 65, alpha);
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
