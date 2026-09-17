@@ -1,5 +1,3 @@
-import PremiumTextReveal from "@/components/motion/PremiumText/PremiumTextReveal";
-import "./style/portfolio.css";
 import PortfolioWrapper from "./portfolio-wrapper";
 import siteData from "../../data/site.json";
 
@@ -31,20 +29,11 @@ export const metadata = {
 export default function Portfolio() {
   return (
     <>
-      <main style={{ paddingTop: '80px', minHeight: '100vh' }}>
-        <div style={{ textAlign: 'center', marginBottom: '4rem', marginTop: '2rem' }}>
-          <PremiumTextReveal text="Selected Works" type="heading" delay={0.1} />
-          <PremiumTextReveal
-            text="Cinematic wedding stories from Kanpur, Uttar Pradesh & across India"
-            type="subheading"
-            delay={0.3}
-            style={{ marginTop: '1rem' }}
-          />
-        </div>
+      <main style={{ paddingTop: '100px', minHeight: '100vh', paddingBottom: '5rem' }}>
         <PortfolioWrapper />
       </main>
 
-      {/* Breadcrumb Schema */}
+      {/* Schema metadata */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -55,25 +44,6 @@ export default function Portfolio() {
               { "@type": "ListItem", "position": 1, "name": "Home", "item": siteData.url },
               { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": `${siteData.url}/portfolio` },
             ],
-          }),
-        }}
-      />
-
-      {/* CreativeWork / VideoGallery schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Wedding Films Portfolio – Vivah BTS Kanpur",
-            "description": "Cinematic wedding films and BTS content by Vivah BTS, Kanpur's premier wedding videographers.",
-            "url": `${siteData.url}/portfolio`,
-            "creator": {
-              "@type": "Organization",
-              "name": siteData.author,
-              "url": siteData.url,
-            },
           }),
         }}
       />

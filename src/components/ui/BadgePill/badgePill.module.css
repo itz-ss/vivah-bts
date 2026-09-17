@@ -1,0 +1,32 @@
+.badgePill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 1.35rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid rgba(216, 112, 147, 0.35);
+    box-shadow: 0 6px 20px rgba(216, 112, 147, 0.12);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.badgePill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.2);
+}
+
+.badgeIcon {
+    color: #D87093;
+    display: flex;
+    align-items: center;
+}
+
+.badgeText {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9E355E;
+}

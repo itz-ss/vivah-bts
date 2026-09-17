@@ -1,0 +1,40 @@
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+}
+
+.centered {
+    align-items: center;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+    line-height: 1.15;
+    font-weight: 300;
+    color: #1A1416;
+    margin: 1.25rem 0 1rem 0;
+}
+
+.highlightText {
+    background: linear-gradient(135deg, #D87093 0%, #E85D75 45%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+
+    em {
+        font-style: italic;
+        padding-right: 0.2rem;
+    }
+}
+
+.sectionDescription {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(30, 20, 25, 0.75);
+    max-width: 640px;
+    margin: 0;
+}

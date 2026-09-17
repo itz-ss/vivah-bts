@@ -1,65 +1,78 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import "./style/faqPreview.css";
-import faqs from "@/data/faqs.json";
-import PremiumTextReveal from "@/components/motion/PremiumText/PremiumTextReveal";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import SectionHeader from '../../ui/SectionHeader/SectionHeader';
+import GlassCard from '../../ui/GlassCard/GlassCard';
+import faqs from '@/data/faqs.json';
+import styles from './style/faqPreview.module.css';
 
 export default function FAQPreview() {
-  const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState(0);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
-  return (
-    <section className="faq-section section-white">
-      <div className="container">
+    return (
+        <section className={styles.faqSection}>
+            <div className={styles.container}>
+                <SectionHeader
+                    badge="Wedding Cinema FAQ"
+                    title="Frequently Asked"
+                    highlight="Questions"
+                    titleEnd=""
+                    description="Everything you need to know about our videography packages, booking process, real-time edits, and delivery."
+                />
 
-        <div className="faq-header text-center">
-          <PremiumTextReveal
-            text="Frequently Asked Questions"
-            type="heading"
-            delay={0.6}
-          />
+                <div className={styles.faqList}>
+                    {faqs.map((item, index) => {
+                        const isOpen = openIndex === index;
+                        return (
+                            <GlassCard key={item.id || index} className={styles.faqCard} hoverEffect={false}>
+                                <button
+                                    className={styles.faqQuestionBtn}
+                                    onClick={() => toggleFAQ(index)}
+                                    aria-expanded={isOpen}
+                                    type="button"
+                                >
+                                    <span className={styles.questionText}>{item.question}</span>
+                                    <span className={`${styles.toggleIcon} ${isOpen ? styles.iconOpen : ''}`}>
+                                        {isOpen ? '−' : '+'}
+                                    </span>
+                                </button>
 
-          <PremiumTextReveal
-            text="Everything you need to know about our wedding filming services."
-            type="subheading"
-            delay={0.3}
-          />
-        </div>
+                                <AnimatePresence>
+                                    {isOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            className={styles.answerWrapper}
+                                        >
+                                            <p className={styles.answerText}>{item.answer}</p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </GlassCard>
+                        );
+                    })}
+                </div>
 
-        <div className="faq-list">
-          {faqs.map((item, index) => (
-            <div
-              key={item.id}
-              className={`faq-item ${openIndex === index ? "open" : ""}`}
-            >
-              <button
-                className="faq-question"
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-                aria-controls={`faq-answer-${index}`}
-              >
-                {item.question}
-                <span className="faq-icon">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </button>
-
-              <div
-                id={`faq-answer-${index}`}
-                className="faq-answer"
-                role="region"
-              >
-                <p>{item.answer}</p>
-              </div>
+                {/* Bottom Callout Banner */}
+                <div className={styles.helpCallout}>
+                    <p>Have more questions about your wedding dates or custom requirements?</p>
+                    <a
+                        href="https://wa.me/918299399871?text=Hi%20Vivah%20BTS!%20I%20have%20a%20question%20about%20your%20services."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.whatsappHelpBtn}
+                    >
+                        Chat Directly on WhatsApp →
+                    </a>
+                </div>
             </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
+        </section>
+    );
 }

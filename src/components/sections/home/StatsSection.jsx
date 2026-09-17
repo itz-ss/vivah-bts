@@ -1,62 +1,32 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { useInView, useMotionValue, useSpring } from 'framer-motion';
+import { motion } from 'framer-motion';
+import GlassCard from '../../ui/GlassCard/GlassCard';
 import styles from './style/statsSection.module.css';
 
-// Animated Counter Sub-Component
-function AnimatedCounter({ value, isInView }) {
-    // Parse the number and the suffix (e.g. "150" and "+")
-    const numericValue = parseInt(value, 10);
-    const suffix = value.toString().replace(numericValue.toString(), '');
-
-    const motionValue = useMotionValue(0);
-    const springValue = useSpring(motionValue, {
-        stiffness: 50,
-        damping: 20,
-        duration: 2
-    });
-
-    const nodeRef = useRef(null);
-
-    useEffect(() => {
-        if (isInView) {
-            motionValue.set(numericValue);
-        }
-    }, [isInView, numericValue, motionValue]);
-
-    useEffect(() => {
-        return springValue.on("change", (latest) => {
-            if (nodeRef.current) {
-                nodeRef.current.textContent = Math.floor(latest) + suffix;
-            }
-        });
-    }, [springValue, suffix]);
-
-    return <span ref={nodeRef}>0{suffix}</span>;
-}
+const SparkleIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+    </svg>
+);
 
 export default function StatsSection({ data }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
-
-    if (!data || data.length === 0) return null;
+    if (!data || !Array.isArray(data)) return null;
 
     return (
-        <section className={styles.statsSection} ref={ref}>
-            <div className={styles.grid}>
-                {data.map((stat, idx) => (
-                    <div
-                        key={idx}
-                        className={`${styles.statCard} ${isInView ? styles.visible : ''}`}
-                        style={{ transitionDelay: `${idx * 0.15}s` }}
-                    >
-                        <div className={styles.number}>
-                            <AnimatedCounter value={stat.value} isInView={isInView} />
-                        </div>
-                        <div className={styles.label}>{stat.label}</div>
-                    </div>
-                ))}
+        <section className={styles.statsSection}>
+            <div className={styles.container}>
+                <div className={styles.statsGrid}>
+                    {data.map((stat, idx) => (
+                        <GlassCard key={idx} className={styles.statCard}>
+                            <div className={styles.statHeader}>
+                                <span className={styles.statValue}>{stat.value}</span>
+                                <span className={styles.statIcon}><SparkleIcon /></span>
+                            </div>
+                            <span className={styles.statLabel}>{stat.label}</span>
+                        </GlassCard>
+                    ))}
+                </div>
             </div>
         </section>
     );

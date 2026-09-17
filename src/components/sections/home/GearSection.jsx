@@ -1,38 +1,41 @@
 'use client';
 
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import PremiumTextReveal from '../../motion/PremiumText/PremiumTextReveal';
+import SectionHeader from '../../ui/SectionHeader/SectionHeader';
+import GlassCard from '../../ui/GlassCard/GlassCard';
 import styles from './style/gearSection.module.css';
 
-export default function GearSection({ data }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
+const CameraIcon = () => (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+        <circle cx="12" cy="13" r="4"></circle>
+    </svg>
+);
 
-    if (!data || !data.items) return null;
+export default function GearSection({ data }) {
+    if (!data) return null;
+
+    const items = data.items || [];
 
     return (
-        <section className={styles.gearSection} ref={ref}>
+        <section className={styles.gearSection}>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <PremiumTextReveal text={data.title} type="heading" delay={0.1} />
-                    <PremiumTextReveal text={data.subtitle} type="subheading" delay={0.3} className={styles.subtitle} />
-                </div>
+                <SectionHeader
+                    badge="Cinema Technology"
+                    title="Precision Gear &"
+                    highlight="4K Technology"
+                    titleEnd=""
+                    description={data.subtitle || "We use industry-leading equipment to capture your wedding with cinematic brilliance."}
+                />
 
                 <div className={styles.grid}>
-                    {data.items.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className={`${styles.card} ${isInView ? styles.visible : ''}`}
-                            style={{ transitionDelay: `${0.2 + idx * 0.1}s` }}
-                        >
-                            <div className={styles.imageWrapper}>
-                                <img src={item.image} alt={item.name} className={styles.image} loading="lazy" />
+                    {items.map((item, idx) => (
+                        <GlassCard key={idx} className={styles.gearCard}>
+                            <div className={styles.gearIconBubble}>
+                                <CameraIcon />
                             </div>
-                            <h4 className={styles.gearName}>{item.name}</h4>
-                            {/* Subtle line under text for elegance */}
-                            <div className={styles.aestheticLine}></div>
-                        </div>
+                            <h3 className={styles.gearName}>{item.name}</h3>
+                            <span className={styles.gearTag}>4K Cinema Standard</span>
+                        </GlassCard>
                     ))}
                 </div>
             </div>

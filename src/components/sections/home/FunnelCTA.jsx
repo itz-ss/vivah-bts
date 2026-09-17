@@ -1,64 +1,65 @@
 'use client';
 
 import Link from 'next/link';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import GlassCard from '../../ui/GlassCard/GlassCard';
 import styles from './style/funnelCta.module.css';
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '91XXXXXXXXXX';
+const WhatsAppIcon = () => (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.119.555 4.109 1.525 5.836L0 24l6.304-1.497A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.831 0-3.548-.488-5.034-1.338l-.361-.205-3.743.889.914-3.647-.236-.375C2.613 15.82 2 13.978 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+);
+
+const SparkleIcon = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+    </svg>
+);
 
 export default function FunnelCTA({ data }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-10% 0px' });
-
     if (!data) return null;
 
-    const waText = encodeURIComponent(
-        "Hi Vivah BTS! I'm interested in your wedding videography services. Could you please share more details about packages and availability?"
-    );
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
+    const whatsappNumber = "918299399871";
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20Vivah%20BTS!%20I%20would%20like%20to%20enquire%20about%20wedding%20videography.`;
 
     return (
-        <section className={styles.funnelSection} ref={ref}>
-            <div className={`${styles.inner} ${isInView ? styles.visible : ''}`}>
+        <section className={styles.ctaSection}>
+            <div className={styles.container}>
+                <GlassCard className={styles.ctaCard} hoverEffect={false}>
+                    <div className={styles.badgePill}>
+                        <SparkleIcon />
+                        <span>{data.overline || "Based in Kanpur · Serving Across India"}</span>
+                    </div>
 
-                {data.overline && (
-                    <span className={styles.overline}>{data.overline}</span>
-                )}
+                    <h2 className={styles.title}>
+                        {data.title || "Ready to Make Your Wedding Unforgettable?"}
+                    </h2>
 
-                <h2 className={styles.title}>{data.title}</h2>
-                <p className={styles.subtitle}>{data.subtitle}</p>
+                    <p className={styles.subtitle}>
+                        {data.subtitle || "Let's talk about your special day. We respond within the hour."}
+                    </p>
 
-                <div className={styles.ctaRow}>
-                    {/* Primary — WhatsApp */}
-                    <a
-                        href={waUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.btnPrimary}
-                        aria-label="Chat with Vivah BTS on WhatsApp"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 640 640"
-                            className={styles.btnIcon}
-                            aria-hidden="true"
+                    <div className={styles.buttonGroup}>
+                        <a
+                            href={whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.whatsappBtn}
                         >
-                            <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
-                        </svg>
-                        {data.primaryCta.text}
-                    </a>
+                            <WhatsAppIcon />
+                            <span>{data.primaryCta?.text || "WhatsApp Us Now"}</span>
+                        </a>
 
-                    {/* Secondary — Contact Form */}
-                    <Link href={data.secondaryCta.href} className={styles.btnSecondary}>
-                        {data.secondaryCta.text}
-                    </Link>
-                </div>
+                        <Link href={data.secondaryCta?.href || "/contact"} className={styles.enquiryBtn}>
+                            <span>{data.secondaryCta?.text || "Send an Enquiry"}</span>
+                        </Link>
+                    </div>
 
-                {data.trustLine && (
-                    <p className={styles.trustLine}>{data.trustLine}</p>
-                )}
-
+                    <span className={styles.trustLine}>
+                        💖 {data.trustLine || "300+ happy couples · Kanpur, UP & Pan-India"}
+                    </span>
+                </GlassCard>
             </div>
         </section>
     );

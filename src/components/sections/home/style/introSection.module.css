@@ -1,75 +1,84 @@
 .introSection {
     position: relative;
-    width: 100%;
-    padding: var(--spacing-hero) 0;
-    background: transparent;
+    padding: 6rem 5vw;
+    background: linear-gradient(180deg, rgba(255, 240, 245, 0.4) 0%, rgba(255, 228, 235, 0.3) 100%);
+    overflow: hidden;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1360px;
     margin: 0 auto;
-    padding: 0 8vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.featureCard {
+    padding: 2.5rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    align-items: flex-start;
 }
 
-@media (min-width: 1024px) {
-    .container {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 12vw;
-    }
+.cardIconBubble {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #D87093 0%, #C54B74 100%);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(216, 112, 147, 0.3);
 }
 
-.header {
-    flex: 1;
+.goldBubble {
+    background: linear-gradient(135deg, #F59E0B 0%, #D87093 100%);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
 }
 
-.title {
+.cardTitle {
     font-family: var(--font-heading);
-    color: var(--color-text-primary);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom: 2rem;
-    line-height: 1.1;
+    font-size: 1.5rem;
+    color: #1A1416;
+    margin-bottom: 0.85rem;
+    font-weight: 500;
 }
 
-.content {
-    flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.description {
+.cardDesc {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(30, 20, 25, 0.75);
     margin: 0;
 }
 
-.footerRow {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 1rem;
+.footerQuote {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid rgba(216, 112, 147, 0.25);
+    max-width: 780px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(216, 112, 147, 0.08);
 }
 
-.footerText {
+.quoteText {
     font-family: var(--font-heading);
+    font-size: 1.6rem;
     font-style: italic;
-    font-size: 1.5rem;
-    color: var(--color-accent);
-    white-space: nowrap;
-    font-weight: 300;
+    color: #9E355E;
+    margin: 0;
 }
 
-.aestheticLine {
-    flex-grow: 1;
-    height: 1px;
-    background: var(--color-accent);
-    opacity: 0.2;
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

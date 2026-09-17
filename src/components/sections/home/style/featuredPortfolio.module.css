@@ -1,274 +1,131 @@
-/* ===============================
-   Featured Portfolio Section – Cinematic Dark
-================================ */
-
 .portfolioSection {
-    padding: var(--spacing-hero) 0;
-    background: transparent;
-    overflow: hidden;
+    position: relative;
+    padding: 6rem 5vw;
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1360px;
     margin: 0 auto;
-    padding: 0 5vw;
 }
-
-/* ===============================
-   Header
-================================ */
-
-.header {
-    text-align: left;
-    margin-bottom: var(--spacing-xxl);
-    border-left: 2px solid var(--color-accent);
-    padding-left: 2rem;
-}
-
-.title {
-    margin: 0;
-    font-weight: 300;
-    color: var(--color-text-primary);
-}
-
-.subtitle {
-    margin-top: 12px;
-    font-style: italic;
-    opacity: 0.8;
-    color: var(--color-accent);
-}
-
-/* ===============================
-   Grid
-================================ */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem 2rem;
+    gap: 2.25rem;
 }
 
-/* ===============================
-   Card
-================================ */
-
-.card {
-    position: relative;
+.portfolioCard {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    transition: all var(--transition-luxury);
-    opacity: 0;
-    transform: translateY(40px);
-    cursor: pointer;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-}
-
-.card:global(.visible),
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-glow);
-    border-color: var(--color-accent);
 }
 
 .imageWrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
-    background: var(--color-background);
+    border-radius: 20px;
 }
 
-.video,
-.image {
+.portfolioImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: brightness(0.8) contrast(1.1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.card:hover .video,
-.card:hover .image {
-    transform: scale(1.05);
-    filter: brightness(1) contrast(1.1);
+.portfolioCard:hover .portfolioImg {
+    transform: scale(1.08);
 }
 
-.muteBtn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 32px;
-    height: 32px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--color-border);
-    color: var(--color-text-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    padding: 7px;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-}
-
-.muteBtn:hover {
-    background: var(--color-accent);
-    color: var(--color-background);
-    border-color: var(--color-accent);
-}
-
-/* ===============================
-   Overlay
-================================ */
-
-.overlay {
+.cardOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(255, 240, 245, 0.8) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(20, 10, 15, 0.6) 0%, transparent 60%);
+    transition: opacity 0.3s ease;
+}
+
+.playButtonWrapper {
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: all 0.4s ease;
+    z-index: 2;
 }
 
-.card:hover .overlay {
-    opacity: 1;
+.playBubble {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #D87093;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    padding-left: 3px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.viewText {
-    color: var(--color-background);
-    background: var(--color-accent);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+.portfolioCard:hover .playBubble {
+    transform: scale(1.15);
+    background: #FFFFFF;
+    color: #C54B74;
+}
+
+.categoryBadge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #9E355E;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: 600;
-    border: 1px solid var(--color-accent);
-    padding: 0.8rem 1.6rem;
-    backdrop-filter: blur(4px);
-    border-radius: 2px;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(8px);
+    z-index: 2;
 }
 
-/* ===============================
-   Card Content
-================================ */
-
-.cardContent {
+.cardBody {
     padding: 1.5rem;
-    text-align: left;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between;
 }
 
-.category {
-    display: block;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    font-weight: 600;
-    opacity: 0.8;
-}
-
-.cardTitle {
-    font-size: 1.1rem;
-    font-weight: 300;
-    line-height: 1.5;
+.itemTitle {
     font-family: var(--font-heading);
-    color: var(--color-text-primary);
-    margin: 0;
-    display: -webkit-box;
-    line-clamp: 2;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* ===============================
-   Footer CTA
-================================ */
-
-.footer {
-    text-align: center;
-    margin-top: 5rem;
-}
-
-.viewAllBtn {
-    display: inline-block;
-    padding: 1.25rem 4.5rem;
-    background: transparent;
-    border: 1px solid var(--color-accent);
-    color: var(--color-text-primary);
-    text-decoration: none;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 1.4rem;
+    color: #1A1416;
+    margin-bottom: 0.5rem;
     font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    transition: all var(--transition-fast);
 }
 
-.viewAllBtn:hover {
-    background: var(--color-accent);
-    color: var(--color-background);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-glow);
+.watchTrigger {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #D87093;
+    transition: color 0.3s ease;
 }
 
-/* ===============================
-   Skeleton
-================================ */
-
-.cardSkeleton {
-    aspect-ratio: 4 / 5;
-    background: linear-gradient(90deg,
-            rgba(255, 255, 255, 0.02) 25%,
-            rgba(255, 255, 255, 0.05) 50%,
-            rgba(255, 255, 255, 0.02) 75%);
-    background-size: 400% 100%;
-    animation: shimmer 1.5s infinite linear;
-    border-radius: 4px;
+.portfolioCard:hover .watchTrigger {
+    color: #C54B74;
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
-
-    100% {
-        background-position: -200% 0;
-    }
-}
-
-/* ===============================
-   Responsive
-================================ */
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .header {
-        padding-left: 1.5rem;
     }
 }
