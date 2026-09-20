@@ -1,3 +1,5 @@
+import { partitionInstagramMedia } from './instagramMediaPipeline';
+
 export const normalizeInstagramMedia = (media) => {
     const isReel = media.media_product_type === 'REELS';
     const isVideo = media.media_type === 'VIDEO';
@@ -12,7 +14,15 @@ export const normalizeInstagramMedia = (media) => {
     };
 };
 
-export const normalizeInstagramData = (data) => ({
-    ...data,
-    data: (data?.data || []).map(normalizeInstagramMedia),
-});
+export const normalizeInstagramData = (data) => {
+    const normalizedMedia = (data?.data || []).map(normalizeInstagramMedia);
+    const { playable } = partitionInstagramMedia(normalizedMedia);
+
+    return {
+        ...data,
+        data: playable,
+        counts: {
+            playable: playable.length,
+        },
+    };
+};

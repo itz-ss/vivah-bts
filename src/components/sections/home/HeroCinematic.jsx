@@ -105,8 +105,8 @@ export default function HeroCinematic({ data }) {
     if (!data) return null;
 
     const subtitleText = data.subtitle || "India's Premier Wedding BTS & Cinematic Films";
-    const videoSource = heroReel?.media_url || data.videoUrl || "/videos/herovideo.mp4";
-    const heroPoster = heroReel?.thumbnail_url || heroReel?.media_url || "/images/portfolio/image1.png";
+    const videoSource = heroReel?.media_url || data.videoUrl;
+    const heroPoster = heroReel?.thumbnail_url || heroReel?.media_url ;
     const ctaLinkTarget = data.ctaLink || "/portfolio";
     const ctaButtonText = data.ctaText || "Explore Wedding Films";
 

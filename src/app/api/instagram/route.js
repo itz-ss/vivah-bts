@@ -1,4 +1,5 @@
 import { normalizeInstagramData } from "../../../lib/instagramNormalizer";
+import { isPlayableInstagramMedia } from "../../../lib/instagramMediaPipeline";
 
 const MEDIA_FIELDS = [
   "id",
@@ -53,7 +54,8 @@ export async function GET(request) {
 
     const url = new URL("https://graph.instagram.com/me/media");
     url.searchParams.set("fields", MEDIA_FIELDS);
-    url.searchParams.set("limit", String(limit));
+    const upstreamLimit = Math.min(Math.max(limit * 3, 10), 50);
+    url.searchParams.set("limit", String(upstreamLimit));
     url.searchParams.set("access_token", ACCESS_TOKEN);
 
     if (after) {
@@ -72,12 +74,17 @@ export async function GET(request) {
     const rawData = await res.json();
     const normalized = normalizeInstagramData({
       ...rawData,
-      data: await Promise.all((rawData.data || []).map((media) => getMediaInsights(media, ACCESS_TOKEN))),
+      data: await Promise.all(
+        (rawData.data || [])
+          .filter(isPlayableInstagramMedia)
+          .map((media) => getMediaInsights(media, ACCESS_TOKEN))
+      ),
     });
 
-    const allReels = normalized.data.filter((media) => media.isReel);
+    const playableMedia = normalized.data;
+    const portfolioPage = playableMedia.slice(0, limit);
+    const allReels = playableMedia.filter((media) => media.isReel);
     const recentReels = allReels
-      .filter((media) => media.isReel)
       .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))
       .slice(0, 6);
 
@@ -91,6 +98,7 @@ export async function GET(request) {
 
     return Response.json({
       ...normalized,
+      data: portfolioPage,
       pinnedReels,
       heroReel: [...recentReels].sort((a, b) => b.viewCount - a.viewCount)[0] || null,
       selection: configuredPinnedIds.length ? "configured-pinned-reels" : "top-reels-from-latest-six",
