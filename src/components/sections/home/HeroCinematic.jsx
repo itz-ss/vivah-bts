@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import styles from './style/heroCinematic.module.css';
@@ -79,6 +79,18 @@ const FloatingParticles = () => {
 export default function HeroCinematic({ data }) {
     const containerRef = useRef(null);
     const [isVideoOpen, setIsVideoOpen] = useState(false);
+    const [heroReel, setHeroReel] = useState(null);
+
+    useEffect(() => {
+        let active = true;
+        fetch('/api/instagram?limit=3')
+            .then((response) => response.ok ? response.json() : null)
+            .then((result) => {
+                if (active && result?.heroReel) setHeroReel(result.heroReel);
+            })
+            .catch(() => undefined);
+        return () => { active = false; };
+    }, []);
 
     // Parallax scrolling
     const { scrollYProgress } = useScroll({
@@ -93,7 +105,8 @@ export default function HeroCinematic({ data }) {
     if (!data) return null;
 
     const subtitleText = data.subtitle || "India's Premier Wedding BTS & Cinematic Films";
-    const videoSource = data.videoUrl || "/videos/herovideo.mp4";
+    const videoSource = heroReel?.media_url || data.videoUrl || "/videos/herovideo.mp4";
+    const heroPoster = heroReel?.thumbnail_url || heroReel?.media_url || "/images/portfolio/image1.png";
     const ctaLinkTarget = data.ctaLink || "/portfolio";
     const ctaButtonText = data.ctaText || "Explore Wedding Films";
 
@@ -204,7 +217,7 @@ export default function HeroCinematic({ data }) {
                                 aria-label="Open wedding highlight video"
                             >
                                 <img
-                                    src="/images/portfolio/image1.png"
+                                    src={heroPoster}
                                     alt="Joyful Wedding Celebration"
                                     className={styles.heroMediaImage}
                                 />
@@ -300,7 +313,7 @@ export default function HeroCinematic({ data }) {
                                     controls
                                     autoPlay
                                     playsInline
-                                    poster="/images/portfolio/image1.png"
+                                    poster={heroPoster}
                                     className={styles.modalVideo}
                                 >
                                     Your browser does not support video play.

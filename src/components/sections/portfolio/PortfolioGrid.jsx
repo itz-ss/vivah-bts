@@ -51,14 +51,16 @@ export default function PortfolioGrid({
                                 />
                                 <div className={styles.overlayGradient} />
 
-                                <div className={styles.playBubbleWrapper}>
-                                    <div className={styles.playBubble}>
-                                        <PlayIcon />
+                                {post.isVideo && (
+                                    <div className={styles.playBubbleWrapper}>
+                                        <div className={styles.playBubble}>
+                                            <PlayIcon />
+                                        </div>
                                     </div>
-                                </div>
+                                )}
 
                                 <span className={styles.mediaTag}>
-                                    {post.media_type === "VIDEO" ? "🎬 Wedding Reel" : "📸 Photo Story"}
+                                    {post.contentType === "reel" ? "Wedding Reel" : post.contentType === "video" ? "Wedding Video" : "Photo Story"}
                                 </span>
                             </div>
 

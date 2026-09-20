@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeader from '../../ui/SectionHeader/SectionHeader';
 import GlassCard from '../../ui/GlassCard/GlassCard';
@@ -15,10 +15,35 @@ const PlayIcon = () => (
 
 export default function FeaturedPortfolio({ data }) {
     const [selectedVideo, setSelectedVideo] = useState(null);
+    const [instagramReels, setInstagramReels] = useState(null);
+
+    useEffect(() => {
+        let isActive = true;
+
+        fetch('/api/instagram?limit=10')
+            .then((response) => response.ok ? response.json() : null)
+            .then((result) => {
+                if (!isActive || !result?.pinnedReels?.length) return;
+
+                setInstagramReels(result.pinnedReels.slice(0, 3).map((reel) => ({
+                    id: reel.id,
+                    title: reel.caption?.split('\n')[0]?.trim() || 'Instagram Wedding Reel',
+                    category: 'Instagram Reel',
+                    image: reel.thumbnail_url || reel.media_url,
+                    video: reel.media_url,
+                    permalink: reel.permalink,
+                })));
+            })
+            .catch(() => undefined);
+
+        return () => {
+            isActive = false;
+        };
+    }, []);
 
     if (!data) return null;
 
-    const items = data.items || [];
+    const items = instagramReels || (data.items || []).slice(0, 3);
 
     return (
         <section className={styles.portfolioSection}>
@@ -43,6 +68,9 @@ export default function FeaturedPortfolio({ data }) {
                                     src={item.image || '/images/portfolio/portfolio1.jpg'}
                                     alt={item.title}
                                     className={styles.portfolioImg}
+                                    onError={(event) => {
+                                        event.currentTarget.src = '/images/portfolio/portfolio1.jpg';
+                                    }}
                                 />
                                 <div className={styles.cardOverlay} />
 

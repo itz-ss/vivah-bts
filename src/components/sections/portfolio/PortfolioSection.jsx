@@ -46,7 +46,10 @@ export default function PortfolioSection() {
       // Deduplicate posts by ID
       setPosts(prev => {
         const existingIds = new Set(prev.map((p) => p.id));
-        const newPosts = (data.data || []).filter((post) => !existingIds.has(post.id));
+        const featured = nextCursor ? [] : (data.pinnedReels || []);
+        const newPosts = [...featured, ...(data.data || [])].filter((post, index, all) =>
+          !existingIds.has(post.id) && all.findIndex((candidate) => candidate.id === post.id) === index
+        );
         return [...prev, ...newPosts];
       });
 

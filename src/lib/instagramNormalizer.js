@@ -1,4 +1,18 @@
-export const normalizeInstagramData = (data) => {
-    // Logic to normalize Instagram API response
-    return data;
+export const normalizeInstagramMedia = (media) => {
+    const isReel = media.media_product_type === 'REELS';
+    const isVideo = media.media_type === 'VIDEO';
+
+    return {
+        ...media,
+        contentType: isReel ? 'reel' : isVideo ? 'video' : 'photo',
+        isReel,
+        isVideo,
+        isPhoto: !isVideo,
+        viewCount: Number(media.viewCount ?? media.plays ?? media.views ?? 0),
+    };
 };
+
+export const normalizeInstagramData = (data) => ({
+    ...data,
+    data: (data?.data || []).map(normalizeInstagramMedia),
+});

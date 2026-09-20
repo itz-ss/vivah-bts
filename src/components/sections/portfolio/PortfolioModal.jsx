@@ -45,7 +45,7 @@ export default function PortfolioModal({ item, cleanCaption, onClose }) {
             </button>
 
             <div className={styles.mediaContainer}>
-              {item.media_type === "VIDEO" ? (
+              {item.isVideo ? (
                 <video
                   src={item.media_url}
                   controls
@@ -77,7 +77,9 @@ export default function PortfolioModal({ item, cleanCaption, onClose }) {
                   year: "numeric",
                 })}
               </span>
-              <h2 className={styles.title}>Instagram Post</h2>
+              <h2 className={styles.title}>
+                {item.contentType === "reel" ? "Instagram Reel" : item.contentType === "video" ? "Instagram Video" : "Instagram Photo Story"}
+              </h2>
               <p className={styles.description}>{cleanCaption?.(item.caption)}</p>
             </div>
           </motion.div>
