@@ -172,7 +172,7 @@ export default function HeroCinematic({ data }) {
                             <div className={styles.trustItem}>
                                 <span className={styles.trustIcon}><CheckBadgeIcon /></span>
                                 <div className={styles.trustText}>
-                                    <strong>250+</strong>
+                                    <strong>100+</strong>
                                     <span>Grand Weddings</span>
                                 </div>
                             </div>

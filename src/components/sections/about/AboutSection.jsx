@@ -53,7 +53,7 @@ export default function AboutSection({ data }) {
                             className={styles.teamImg}
                         />
                         <div className={styles.imageBadge}>
-                            <span>🎬 Based in Kanpur · Pan-India Coverage</span>
+                            <span>🎬 Based in Delhi/Lucknow · Pan-India Coverage</span>
                         </div>
                     </GlassCard>
                 </div>

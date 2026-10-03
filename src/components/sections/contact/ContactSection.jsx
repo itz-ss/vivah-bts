@@ -81,7 +81,7 @@ export default function ContactSection({ data }) {
                     {/* Left Info Column */}
                     <div className={styles.infoColumn}>
                         <GlassCard className={styles.infoCard} hoverEffect={false}>
-                            <BadgePill icon={<SparkleIcon />}>Kanpur Studio & Pan-India</BadgePill>
+                            <BadgePill icon={<SparkleIcon />}>Studio & Pan-India</BadgePill>
                             <h3 className={styles.infoTitle}>Direct Contact Details</h3>
 
                             <div className={styles.detailItem}>
@@ -93,19 +93,19 @@ export default function ContactSection({ data }) {
 
                             <div className={styles.detailItem}>
                                 <span className={styles.detailLabel}>✉️ Direct Email</span>
-                                <a href={`mailto:${data.contactInfo?.email || 'contact@vivahbts.com'}`} className={styles.detailValue}>
-                                    {data.contactInfo?.email || 'contact@vivahbts.com'}
+                                <a href={`mailto:${data.contactInfo?.email || 'vivahbts.co@gmail.com'}`} className={styles.detailValue}>
+                                    {data.contactInfo?.email || 'vivahbts.co@gmail.com'}
                                 </a>
                             </div>
 
                             <div className={styles.detailItem}>
                                 <span className={styles.detailLabel}>📍 Base Location</span>
-                                <span className={styles.detailValue}>{data.contactInfo?.location || 'Kanpur, Uttar Pradesh, India'}</span>
+                                <span className={styles.detailValue}>{data.contactInfo?.location || 'Delhi/Lucknow, India'}</span>
                             </div>
 
                             <div className={styles.trustSignals}>
                                 <span>⚡ Same-Day Edit Delivery</span>
-                                <span>🏆 250+ Weddings Covered</span>
+                                <span>🏆 100+ Weddings Covered</span>
                                 <span>💖 100% Guaranteed Smiles</span>
                             </div>
                         </GlassCard>

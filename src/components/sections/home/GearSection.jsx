@@ -34,7 +34,6 @@ export default function GearSection({ data }) {
                                 <CameraIcon />
                             </div>
                             <h3 className={styles.gearName}>{item.name}</h3>
-                            <span className={styles.gearTag}>4K Cinema Standard</span>
                         </GlassCard>
                     ))}
                 </div>

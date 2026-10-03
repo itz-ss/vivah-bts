@@ -42,12 +42,12 @@ export default function Footer() {
                     </Link>
 
                     <p className={styles.brandDescription}>
-                        Crafting timeless cinematic wedding films, aesthetic reels, and real-time edits that capture authentic laughter, tears, and eternal love stories across Kanpur & Pan-India.
+                        Crafting timeless cinematic wedding films, aesthetic reels, and real-time edits that capture authentic laughter, tears, and eternal love stories across Pan-India.
                     </p>
 
                     <div className={styles.coverageBadge}>
                         <span className={styles.locationIcon}><LocationPinIcon /></span>
-                        <span>Based in Kanpur · Serving Worldwide</span>
+                        <span>Based in Delhi/Lucknow · Serving pan-India</span>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@ export default function Footer() {
                             ✉️ {siteData.email || 'contact@vivahbts.com'}
                         </a>
                         <p className={styles.addressText}>
-                            📍 Kanpur, Uttar Pradesh, India
+                            📍 Delhi/Lucknow, India
                         </p>
                     </div>
                 </div>

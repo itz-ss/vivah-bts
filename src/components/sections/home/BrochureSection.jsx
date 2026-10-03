@@ -29,11 +29,11 @@ export default function BrochureSection({ data }) {
                         <div className={styles.textContent}>
                             <div className={styles.badgePill}>
                                 <SparkleIcon />
-                                <span>2026-2027 Wedding Cinema Pricing & Packages</span>
+                                <span>Wedding reels Pricing & Packages</span>
                             </div>
 
                             <h2 className={styles.title}>
-                                {data.title || "Download Our Wedding Film Brochure"}
+                                {data.title || "Download Our Wedding bts Brochure"}
                             </h2>
 
                             <p className={styles.description}>
@@ -60,7 +60,7 @@ export default function BrochureSection({ data }) {
                                     <span>Vivah BTS Brochure</span>
                                 </div>
                                 <h3 className={styles.mockupTitle}>Cinematic Stories</h3>
-                                <p className={styles.mockupSub}>Kanpur · Pan-India</p>
+                                <p className={styles.mockupSub}>Delhi/Lucknow & Pan India</p>
                                 <div className={styles.mockupPill}>PDF • 2026 Edition</div>
                             </div>
                         </div>

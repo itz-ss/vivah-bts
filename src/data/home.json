@@ -16,15 +16,15 @@
   "stats": [
     {
       "label": "Weddings Covered",
-      "value": "250+"
+      "value": "100+"
     },
     {
       "label": "Cinematic Reels",
-      "value": "1200+"
+      "value": "800+"
     },
     {
       "label": "Happy Couples",
-      "value": "300+"
+      "value": "150+"
     },
     {
       "label": "Real-time Edits",
@@ -59,8 +59,8 @@
     ]
   },
   "brochure": {
-    "title": "Download Our Wedding Film Brochure",
-    "description": "Explore our cinematic wedding packages, storytelling approach, and premium services in one beautiful brochure.",
+    "title": "Download Our Wedding reels Brochure",
+    "description": "Explore our cinematic reels packages, storytelling approach, and premium services in one beautiful brochure.",
     "btnText": "Download Brochure",
     "btnLink": "/VivahBTSBrochure.pdf",
     "mockupImage": "/images/demo.jpg"
@@ -70,33 +70,29 @@
     "subtitle": "We use industry-leading equipment to ensure your love story is captured with cinematic precision and breathtaking clarity.",
     "items": [
       {
-        "name": "Sony A7S III",
+        "name": "iPhone 17 Pro / 18 Pro",
         "image": "/images/gears/image.png"
       },
       {
-        "name": "DJI Ronin RS3",
+        "name": "DJI Osmo Mobile 8P",
         "image": "/images/gears/image.png"
       },
       {
-        "name": "Master Primes",
+        "name": "LC Lights & Baby Lights",
         "image": "/images/gears/image.png"
       },
       {
-        "name": "DJI Mavic 3 Pro",
+        "name": "Hollyland / Digitek Microphones",
         "image": "/images/gears/image.png"
       },
       {
-        "name": "Hollyland Cosmo",
-        "image": "/images/gears/image.png"
-      },
-      {
-        "name": "Sennheiser Audio",
+        "name": "MacBook",
         "image": "/images/gears/image.png"
       }
     ]
   },
   "funnelCta": {
-    "overline": "Based in Kanpur · Serving Across India",
+    "overline": "Based in Delhi/Lucknow · Serving Across India",
     "title": "Ready to Make Your Wedding Unforgettable?",
     "subtitle": "Let's talk about your special day. We respond within the hour.",
     "primaryCta": {
@@ -107,6 +103,6 @@
       "text": "Send an Enquiry",
       "href": "/contact"
     },
-    "trustLine": "300+ happy couples · Kanpur, UP & Pan-India"
+    "trustLine": "100+ happy couples · Delhi/Lucknow & Pan-India"
   }
 }
