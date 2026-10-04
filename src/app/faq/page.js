@@ -2,20 +2,20 @@ import FAQPreview from "@/components/sections/FAQ/FAQPreview";
 import siteData from "../../data/site.json";
 
 export const metadata = {
-  title: "FAQ | Wedding Videographer Kanpur – Vivah BTS",
-  description: "Frequently asked questions about Vivah BTS — Kanpur's top wedding videographers. Learn about packages, booking, BTS reels, same-day edits & more.",
+  title: "Wedding Content Creation FAQ | Delhi & Lucknow – Vivah BTS",
+  description: "Answers about wedding content creation in Delhi NCR and Lucknow, including reels, BTS coverage, editing, packages, booking, and same-day delivery.",
   keywords: [
-    "wedding videography FAQ Kanpur",
-    "wedding videographer questions Kanpur UP",
-    "cinematic wedding services FAQ",
+    "wedding content creation FAQ Delhi",
+    "wedding content creator questions Lucknow",
+    "wedding reel editor FAQ",
     "wedding content creator packages India",
-    "BTS videography questions Kanpur",
-    "wedding film booking FAQ Uttar Pradesh",
-    "wedding package pricing Kanpur",
+    "same day wedding reel editing questions",
+    "wedding film booking FAQ Delhi NCR",
+    "wedding reel package pricing Lucknow",
   ],
   openGraph: {
-    title: "FAQ | Vivah BTS – Wedding Videographer in Kanpur",
-    description: "Learn about our wedding cinematography packages, booking process, and services in Kanpur, UP.",
+    title: "FAQ | Vivah BTS – Wedding Content Creation in Delhi & Lucknow",
+    description: "Learn about wedding reels, content packages, booking, and same-day edits in Delhi NCR and Lucknow.",
     type: "website",
     locale: "en_IN",
   },
@@ -27,8 +27,8 @@ export const metadata = {
 export default function FAQPage() {
   const faqItems = [
     {
-      question: "Do you cover weddings in Kanpur, Uttar Pradesh?",
-      answer: "Yes! We are based in Kanpur, UP and primarily serve weddings across Kanpur, Lucknow, Prayagraj, Agra, and across Uttar Pradesh. We also travel pan-India for destination weddings."
+      question: "Do you create wedding content in Delhi NCR and Lucknow?",
+      answer: "Yes. Vivah BTS provides wedding content creation in Delhi NCR and Lucknow, and travels across India for destination weddings. Our coverage includes candid moments, behind-the-scenes clips, Instagram reels, and cinematic edits."
     },
     {
       question: "What wedding videography services do you offer?",

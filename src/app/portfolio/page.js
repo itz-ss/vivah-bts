@@ -2,21 +2,21 @@ import PortfolioWrapper from "./portfolio-wrapper";
 import siteData from "../../data/site.json";
 
 export const metadata = {
-  title: "Wedding Films Portfolio | Vivah BTS – Cinematic Videography Kanpur",
-  description: "Explore Vivah BTS's cinematic wedding films, BTS reels & behind-the-scenes content captured across Kanpur, Uttar Pradesh, and destination weddings across India.",
+  title: "Wedding Reels & Films Portfolio | Vivah BTS Delhi & Lucknow",
+  description: "Watch wedding reels, candid BTS clips, and cinematic films by Vivah BTS, creating wedding content in Delhi NCR, Lucknow, and destination celebrations across India.",
   keywords: [
-    "wedding films portfolio Kanpur",
-    "wedding videography work Kanpur UP",
-    "cinematic wedding videos Uttar Pradesh",
-    "BTS wedding content examples Kanpur",
+    "wedding reels portfolio Delhi NCR",
+    "wedding content creator work Lucknow",
+    "cinematic wedding videos Delhi",
+    "wedding BTS content examples",
     "destination wedding films India",
-    "wedding reel samples Kanpur",
-    "luxury wedding cinematography portfolio",
-    "best wedding films UP India",
+    "wedding reel editor samples Lucknow",
+    "wedding content creation portfolio",
+    "cinematic wedding films India",
   ],
   openGraph: {
-    title: "Wedding Portfolio | Vivah BTS – Kanpur",
-    description: "Watch our cinematic wedding films and BTS content from weddings across Kanpur, UP and India.",
+    title: "Wedding Portfolio | Vivah BTS – Delhi & Lucknow",
+    description: "Watch wedding reels, cinematic films, and BTS content created in Delhi NCR, Lucknow, and across India.",
     type: "website",
     locale: "en_IN",
     images: [{ url: siteData.image, width: 1200, height: 630, alt: "Vivah BTS Wedding Portfolio" }],

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import InstagramCTA from '../InstagramCTA/InstagramCTA';
 import styles from './videoModal.module.css';
 
 const CloseIcon = () => (
@@ -10,7 +11,7 @@ const CloseIcon = () => (
     </svg>
 );
 
-export default function VideoModal({ isOpen, onClose, videoSrc, posterSrc }) {
+export default function VideoModal({ isOpen, onClose, videoSrc, posterSrc, instagramUrl }) {
     return (
         <AnimatePresence>
             {isOpen && (
@@ -49,6 +50,9 @@ export default function VideoModal({ isOpen, onClose, videoSrc, posterSrc }) {
                             >
                                 Your browser does not support video play.
                             </video>
+                        </div>
+                        <div className={styles.modalActions}>
+                            <InstagramCTA href={instagramUrl} />
                         </div>
                     </motion.div>
                 </motion.div>

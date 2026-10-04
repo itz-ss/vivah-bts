@@ -583,6 +583,13 @@
     object-fit: contain;
 }
 
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem 1rem;
+    background: #100d0e;
+}
+
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */

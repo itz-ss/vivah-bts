@@ -269,7 +269,7 @@ export const KEYWORD_FRAMEWORK = {
     high: 'wedding videographer, wedding cinematography',
     medium: 'cinematic wedding videos, wedding content creator',
     long: 'luxury destination wedding videographer india, cinematic wedding reels',
-    local: 'wedding videographer delhi, wedding cinematographer mumbai',
+    local: 'wedding content creator delhi, wedding reel editor lucknow',
   },
 
   researchTools: [

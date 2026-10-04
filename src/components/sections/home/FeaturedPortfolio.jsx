@@ -98,6 +98,7 @@ export default function FeaturedPortfolio({ data }) {
                 onClose={() => setSelectedVideo(null)}
                 videoSrc={selectedVideo?.video || '/videos/herovideo.mp4'}
                 posterSrc={selectedVideo?.image}
+                instagramUrl={selectedVideo?.permalink}
             />
         </section>
     );

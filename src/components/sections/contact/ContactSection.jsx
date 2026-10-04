@@ -133,7 +133,7 @@ export default function ContactSection({ data }) {
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="location" className={styles.label}>{data.formLabels?.location || 'Venue / City'}</label>
-                                    <input type="text" id="location" className={styles.input} placeholder="e.g. Kanpur, Lucknow, Udaipur..." />
+                                    <input type="text" id="location" className={styles.input} placeholder="e.g. Delhi, Lucknow, Jaipur..." />
                                 </div>
 
                                 <div className={styles.inputGroup}>

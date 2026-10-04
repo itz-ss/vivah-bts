@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import InstagramCTA from '../../ui/InstagramCTA/InstagramCTA';
 import styles from './style/portfolioModal.module.css';
 
 export default function PortfolioModal({ item, cleanCaption, onClose }) {
@@ -81,6 +82,11 @@ export default function PortfolioModal({ item, cleanCaption, onClose }) {
                 {item.contentType === "reel" ? "Instagram Reel" : item.contentType === "video" ? "Instagram Video" : "Instagram Photo Story"}
               </h2>
               <p className={styles.description}>{cleanCaption?.(item.caption)}</p>
+              {item.isVideo && (
+                <div className={styles.instagramCta}>
+                  <InstagramCTA href={item.permalink} />
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>

@@ -3,21 +3,21 @@ import contactData from '../../data/contact.json';
 import siteData from '../../data/site.json';
 
 export const metadata = {
-    title: 'Book Wedding Videographer in Kanpur | Vivah BTS',
-    description: "Book Vivah BTS — Kanpur's top wedding videographers. Cinematic films, BTS reels & real-time edits for weddings across Kanpur, Lucknow, UP & India. WhatsApp us today.",
+    title: 'Book a Wedding Content Creator in Delhi or Lucknow | Vivah BTS',
+    description: "Book wedding content creation in Delhi NCR or Lucknow. Get candid wedding reels, BTS coverage, cinematic films, and fast same-day edits from Vivah BTS.",
     keywords: [
-        "book wedding videographer Kanpur",
-        "wedding videography booking Kanpur UP",
-        "contact wedding cinematographer Kanpur",
-        "hire wedding BTS videographer Kanpur",
-        "wedding content creator contact Kanpur",
-        "wedding reel booking Uttar Pradesh",
-        "wedding film inquiry Kanpur",
-        "same day edit wedding Kanpur inquiry",
+        "book wedding content creator Delhi",
+        "book wedding content creator Lucknow",
+        "hire wedding reel editor Delhi NCR",
+        "wedding content creation booking Lucknow",
+        "contact wedding cinematographer Delhi",
+        "wedding BTS reels booking",
+        "same day wedding video editing inquiry",
+        "wedding film and reel package India",
     ],
     openGraph: {
-        title: "Book Your Wedding Film | Vivah BTS – Kanpur",
-        description: "Kanpur's leading wedding videographers. WhatsApp us or fill the form to check availability.",
+        title: "Book Wedding Content Creation | Vivah BTS Delhi & Lucknow",
+        description: "Enquire about wedding reels, BTS coverage, cinematic films, and same-day edits in Delhi NCR or Lucknow.",
         type: "website",
         locale: "en_IN",
     },
@@ -55,20 +55,15 @@ export default function ContactPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ContactPage",
-                        "name": "Contact Vivah BTS – Wedding Videographer Kanpur",
-                        "description": "Book Vivah BTS for cinematic wedding films in Kanpur, UP and across India.",
+                        "name": "Contact Vivah BTS – Wedding Content Creator Delhi and Lucknow",
+                        "description": "Book Vivah BTS for wedding content creation, reels, and cinematic films in Delhi NCR, Lucknow, and across India.",
                         "url": `${siteData.url}/contact`,
                         "mainEntity": {
                             "@type": "LocalBusiness",
                             "name": siteData.author,
                             "telephone": siteData.phone,
                             "email": siteData.email,
-                            "address": {
-                                "@type": "PostalAddress",
-                                "addressLocality": "Kanpur",
-                                "addressRegion": "Uttar Pradesh",
-                                "addressCountry": "IN",
-                            },
+                            "areaServed": ["Delhi NCR", "Lucknow", "India"],
                         },
                     }),
                 }}

@@ -29,7 +29,7 @@ export default function FunnelCTA({ data }) {
                 <GlassCard className={styles.ctaCard} hoverEffect={false}>
                     <div className={styles.badgePill}>
                         <SparkleIcon />
-                        <span>{data.overline || "Based in Kanpur · Serving Across India"}</span>
+                        <span>{data.overline || "Delhi NCR & Lucknow · Serving Across India"}</span>
                     </div>
 
                     <h2 className={styles.title}>
@@ -57,7 +57,7 @@ export default function FunnelCTA({ data }) {
                     </div>
 
                     <span className={styles.trustLine}>
-                        💖 {data.trustLine || "300+ happy couples · Kanpur, UP & Pan-India"}
+                        💖 {data.trustLine || "Wedding content creation · Delhi NCR, Lucknow & Pan-India"}
                     </span>
                 </GlassCard>
             </div>

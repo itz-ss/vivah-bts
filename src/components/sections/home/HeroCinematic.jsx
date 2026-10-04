@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import InstagramCTA from '../../ui/InstagramCTA/InstagramCTA';
 import styles from './style/heroCinematic.module.css';
 
 // SVG Micro Icons for rich visual polish
@@ -318,6 +319,9 @@ export default function HeroCinematic({ data }) {
                                 >
                                     Your browser does not support video play.
                                 </video>
+                            </div>
+                            <div className={styles.modalActions}>
+                                <InstagramCTA />
                             </div>
                         </motion.div>
                     </motion.div>

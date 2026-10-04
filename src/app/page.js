@@ -16,7 +16,7 @@ export const metadata = {
         url: siteData.image,
         width: 1200,
         height: 630,
-        alt: "Vivah BTS – Wedding Videographer in Kanpur, Uttar Pradesh",
+        alt: "Vivah BTS – Wedding Content Creator in Delhi NCR and Lucknow",
       },
     ],
   },
@@ -50,7 +50,7 @@ export default function Home() {
         }}
       />
 
-      {/* Schema: VideoProductionService – Kanpur */}
+      {/* Schema: Wedding content production service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -65,16 +65,9 @@ export default function Home() {
               "name": siteData.author,
               "url": siteData.url,
               "telephone": siteData.phone,
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Kanpur",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "208001",
-                "addressCountry": "IN",
-              },
             },
             "areaServed": [
-              { "@type": "City", "name": "Kanpur" },
+              { "@type": "AdministrativeArea", "name": "Delhi NCR" },
               { "@type": "City", "name": "Lucknow" },
               { "@type": "City", "name": "Prayagraj" },
               { "@type": "State", "name": "Uttar Pradesh" },

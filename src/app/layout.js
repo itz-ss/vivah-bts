@@ -24,7 +24,7 @@ export const metadata = {
   metadataBase: new URL(sitedata.url),
   title: {
     default: sitedata.title,
-    template: "%s | Vivah BTS – Wedding Videographer Kanpur",
+    template: "%s | Vivah BTS – Wedding Content Creator Delhi & Lucknow",
   },
   description: sitedata.description,
   keywords: sitedata.keywords,
@@ -86,16 +86,12 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#FCF9F2" />
-        <meta name="geo.region" content="IN-UP" />
-        <meta name="geo.placename" content="Kanpur" />
-        <meta name="geo.position" content="26.4499;80.3319" />
-        <meta name="ICBM" content="26.4499, 80.3319" />
         <link rel="canonical" href={sitedata.url} />
         <link rel="sitemap" href="/sitemap.xml" />
         <link rel="alternate" hrefLang="en-IN" href={sitedata.url} />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* ── Schema: LocalBusiness (Kanpur-dominant) ── */}
+        {/* ── Schema: LocalBusiness service areas ── */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -111,20 +107,8 @@ export default function RootLayout({ children }) {
               "image": sitedata.image,
               "logo": sitedata.logo,
               "priceRange": "₹₹₹",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Kanpur",
-                "addressRegion": "Uttar Pradesh",
-                "postalCode": "208001",
-                "addressCountry": "IN",
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": sitedata.location.geo.latitude,
-                "longitude": sitedata.location.geo.longitude,
-              },
               "areaServed": [
-                { "@type": "City", "name": "Kanpur" },
+                { "@type": "AdministrativeArea", "name": "Delhi NCR" },
                 { "@type": "City", "name": "Lucknow" },
                 { "@type": "City", "name": "Prayagraj" },
                 { "@type": "City", "name": "Agra" },
@@ -195,7 +179,7 @@ export default function RootLayout({ children }) {
               "description": sitedata.description,
               "foundingLocation": {
                 "@type": "Place",
-                "name": "Kanpur, Uttar Pradesh, India",
+                "name": "Delhi NCR and Lucknow, India",
               },
               "sameAs": [
                 sitedata.social.instagram,

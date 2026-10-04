@@ -134,10 +134,7 @@ export function generateServiceSchema({
       name: siteData.author,
       url: url || siteData.url,
     },
-    areaServed: {
-      '@type': 'City',
-      name: siteData.location.country,
-    },
+    areaServed: siteData.business.serviceArea,
   };
 }
 
