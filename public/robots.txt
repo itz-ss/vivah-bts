@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://vivadbts.co/sitemap.xml
+Sitemap: https://vivahbts.com/sitemap.xml

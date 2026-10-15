@@ -1,4 +1,4 @@
-const SITE_URL = 'https://vivadbts.com';
+const SITE_URL = 'https://vivahbts.com';
 
 // Define all routes with their priority and change frequency
 const routes = [

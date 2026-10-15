@@ -9,7 +9,7 @@ Disallow: /admin/
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://vivadbts.com/sitemap.xml
+Sitemap: https://vivahbts.com/sitemap.xml
 
 # Google-specific
 User-agent: Googlebot

@@ -5,7 +5,7 @@
 
 export const SEO_CONFIG = {
   // Site-wide settings
-  siteUrl: 'https://vivadbts.com',
+  siteUrl: 'https://vivahbts.com',
   language: 'en',
   region: 'IN',
   
@@ -94,8 +94,8 @@ export const SEO_CONFIG = {
   // Twitter Card defaults
   twitter: {
     card: 'summary_large_image',
-    creator: '@vivadbts',
-    site: '@vivadbts',
+    creator: '@vivahbts',
+    site: '@vivahbts',
   },
 
   // Structured data types

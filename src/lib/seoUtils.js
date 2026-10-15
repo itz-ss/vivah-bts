@@ -43,7 +43,7 @@ export function generateTwitterMetadata({
   title,
   description,
   image,
-  creator = '@vivadbts',
+  creator = '@vivahbts',
 }) {
   return {
     twitter: {
@@ -52,7 +52,7 @@ export function generateTwitterMetadata({
       description: description || siteData.description,
       images: [image || siteData.image],
       creator,
-      site: '@vivadbts',
+      site: '@vivahbts',
     },
   };
 }
