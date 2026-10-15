@@ -3,7 +3,7 @@
   "description": "Wedding content creation in Delhi NCR and Lucknow: candid wedding reels, Instagram videos, BTS coverage, cinematic films, and same-day edits.",
   "longDescription": "Vivah BTS creates wedding content for couples in Delhi NCR, Lucknow, and destination celebrations across India. Our team captures candid moments, behind-the-scenes stories, Instagram wedding reels, cinematic films, and fast-turnaround edits so couples can relive and share their celebration while it is still happening.",
   "author": "Vivah BTS",
-  "email": "hello@vivahbts.com",
+  "email": "vivahbts.co@gmail.com",
   "phone": "+91 8299399871",
   "url": "https://vivadbts.co",
   "logo": "https://vivadbts.co/images/logo.png",
@@ -38,7 +38,11 @@
   "location": {
     "country": "India",
     "type": "ServiceAreaBusiness",
-    "serviceAreas": ["Delhi NCR", "Lucknow", "India"]
+    "serviceAreas": [
+      "Delhi NCR",
+      "Lucknow",
+      "India"
+    ]
   },
   "social": {
     "instagram": "https://instagram.com/vivah.bts",
