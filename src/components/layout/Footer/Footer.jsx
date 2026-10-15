@@ -76,8 +76,8 @@ export default function Footer() {
                         <a href={`tel:${siteData.phone?.replace(/\s+/g, '') || '+918299399871'}`} className={styles.contactItem}>
                             📞 {siteData.phone || '+91 82993 99871'}
                         </a>
-                        <a href={`mailto:${siteData.email || 'contact@vivahbts.com'}`} className={styles.contactItem}>
-                            ✉️ {siteData.email || 'contact@vivahbts.com'}
+                        <a href={`mailto:${siteData.email || 'vivahbts.co@gmail.com'}`} className={styles.contactItem}>
+                            ✉️ {siteData.email || 'vivahbts.co@gmail.com'}
                         </a>
                         <p className={styles.addressText}>
                             📍 Delhi/Lucknow, India
