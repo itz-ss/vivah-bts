@@ -12,7 +12,6 @@ export const isPlayableInstagramMedia = (media) => (
     )
 );
 
-
 export const partitionInstagramMedia = (media = []) => media.reduce(
     (partitions, item) => {
 	partitions[isPlayableInstagramMedia(item) ? 'playable' : 'nonPlayable'].push(item);
