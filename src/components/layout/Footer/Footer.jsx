@@ -96,12 +96,6 @@ export default function Footer() {
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialPill}>
                             Instagram
                         </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className={styles.socialPill}>
-                            YouTube
-                        </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialPill}>
-                            Facebook
-                        </a>
                     </div>
                 </div>
             </div>
