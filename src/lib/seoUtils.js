@@ -167,7 +167,7 @@ export function generateVideoSchema({
   description,
   thumbnailUrl,
   uploadDate,
-  duration = 'PT10M',
+  duration = 'PT10M',  
   contentUrl,
 } = {}) {
   return {
